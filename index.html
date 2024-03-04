@@ -19,8 +19,26 @@
 
         <!-- =============== CSS ================= -->
         <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- =============== Scripts ================= -->
+        <script src="./assets/scripts/main.js"></script>
     </head>
     <body>
-        <h1>Hello world</h1>
+        <!-- =============== Header ================= -->
+        <header id="header" class="header"></header>
+        <script>
+            load('#header', './template/header.html');
+        </script>
+
+        <div class="container">
+            <!-- =============== Main ================= -->
+            <h1>Home page</h1>
+
+            <!-- =============== Footer ================= -->
+            <footer id="footer"></footer>
+            <script>
+                load('#footer', './template/footer.html');
+            </script>
+        </div>
     </body>
 </html>

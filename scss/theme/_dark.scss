@@ -1,0 +1,16 @@
+html.dark {
+    --text-color: #fff;
+    --icon-color: brightness(0) saturate(100%) invert(90%) sepia(99%) saturate(33%) hue-rotate(193deg) brightness(108%)
+        contrast(99%);
+
+    //============== Header =================
+    --header-background: rgba(23, 28, 40, 1);
+    --group-background: rgba(41, 46, 57, 1);
+    --hover-btn-header-color: #000;
+    --hover-btn-header-icon: brightness(0) saturate(100%) invert(0%) sepia(90%) saturate(7500%) hue-rotate(60deg)
+        brightness(88%) contrast(112%);
+    --hover-btn-header-background: #fff;
+    --sperate-header-color: rgba(237, 237, 246, 1);
+    --box-shadow-btn-header-color: rgba(0, 0, 0, 0.2);
+    --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
+}
