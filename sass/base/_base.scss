@@ -1,0 +1,32 @@
+/*================== Base ==================*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Gordita', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+section,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
