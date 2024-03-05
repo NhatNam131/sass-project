@@ -153,6 +153,7 @@ body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
   color: var(--text-color);
+  background: var(--body-background);
 }
 
 a {
@@ -1255,6 +1256,11 @@ button {
   }
 }
 
+@media (max-width: 575.98px) {
+  .top-bar {
+    justify-content: space-between;
+  }
+}
 .top-bar__more {
   display: none;
 }
@@ -1298,6 +1304,11 @@ button {
 .top-action {
   gap: 2rem;
   margin-left: auto;
+}
+@media (max-width: 575.98px) {
+  .top-action {
+    margin-left: 0;
+  }
 }
 .top-action__group {
   background: var(--group-background);
@@ -1364,7 +1375,12 @@ button {
 @media (max-width: 991.98px) {
   .logo {
     gap: 1rem;
-    margin-left: 3.9rem;
+    margin-left: 4rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .logo {
+    margin-left: 0;
   }
 }
 .logo__title {
@@ -1397,6 +1413,12 @@ button {
   --sperate-header-color: #ededf6;
   --box-shadow-btn-header-color: rgba(237, 237, 246, 0.2);
   --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
+  --body-background: #f6f6f6;
+}
+@media (max-width: 575.98px) {
+  :root {
+    --header-background: #fff;
+  }
 }
 
 html.dark {
@@ -1412,6 +1434,7 @@ html.dark {
   --sperate-header-color: rgba(237, 237, 246, 1);
   --box-shadow-btn-header-color: rgba(0, 0, 0, 0.2);
   --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
+  --body-background: #292e39;
 }
 
 /*# sourceMappingURL=main.css.map */

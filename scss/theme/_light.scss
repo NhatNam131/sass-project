@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 :root {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(3503%) hue-rotate(210deg) brightness(98%)
@@ -5,6 +7,10 @@
 
     //============== Header =================
     --header-background: #eee;
+    @include abstracts.breakpoint(sm) {
+        --header-background: #fff;
+    }
+
     --group-background: #fff;
     --hover-btn-header-color: #fff;
     --hover-btn-header-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(162deg)
@@ -13,4 +19,7 @@
     --sperate-header-color: #ededf6;
     --box-shadow-btn-header-color: rgba(237, 237, 246, 0.2);
     --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
+
+    //============== Body =================
+    --body-background: #f6f6f6;
 }

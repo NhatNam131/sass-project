@@ -22,6 +22,10 @@
 .top-bar {
     @extend %flexItemCenter;
 
+    @include abstracts.breakpoint(sm) {
+        justify-content: space-between;
+    }
+
     &__more {
         display: none;
 
@@ -70,6 +74,10 @@
     @extend %flexItemCenter;
     gap: 2rem;
     margin-left: auto;
+
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0;
+    }
 
     &__group {
         @extend %flexItemCenter;
