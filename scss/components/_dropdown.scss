@@ -1,0 +1,147 @@
+@use '../abstracts';
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: min(124rem, 100%);
+    margin-top: 5rem;
+    opacity: 0;
+    visibility: hidden;
+
+    &__inner {
+        --inner-padding: 3rem;
+
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 1.25rem;
+        background: var(--dropdown-background);
+        box-shadow: 0px 40px 90px 20px var(--box-shadow-dropdown-color);
+
+        &::before {
+            content: url(../icons/arrow-top.svg);
+            position: absolute;
+            top: -1rem;
+            left: var(--arrow-left-pos);
+            transform: translateX(-50%);
+            filter: var(--arrow-dropdown-color);
+        }
+    }
+}
+
+.top-menu {
+    --main-column-width: 29.2rem;
+    --max-inner-height: calc(min(58.2rem, 100vh - 15.8rem) - var(--inner-padding) * 2);
+    position: relative;
+
+    &__main {
+        width: var(--main-column-width);
+        height: var(--max-inner-height);
+        border-right: 0.1rem solid var(--border-right-top-menu-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 1.4rem;
+
+    &__icon {
+        position: relative;
+        flex-shrink: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
+    }
+
+    &__icon-1 {
+        width: 3rem;
+        height: 3rem;
+        object-fit: contain;
+    }
+
+    &__icon-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        object-fit: contain;
+    }
+
+    &__content {
+        flex: 1;
+        margin-top: 0.5rem;
+    }
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.6rem;
+    }
+
+    &__item {
+        &:hover,
+        &--active {
+            > .menu-column__link {
+                color: var(--item-active-top-menu-color);
+                font-weight: 500;
+            }
+
+            .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 0.7rem 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+    }
+}
+
+.top-menu {
+    &__category {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--max-inner-height);
+        overflow-y: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.3rem;
+    }
+}
+
+.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--inner-padding);
+    overflow-y: auto;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+    }
+}

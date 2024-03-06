@@ -7,8 +7,9 @@
 
     //============== Header =================
     --header-background: #eee;
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(lg) {
         --header-background: #fff;
+        --box-shadow-header-mobile-color: rgba(237, 237, 246, 0.2);
     }
 
     --group-background: #fff;
@@ -20,6 +21,18 @@
     --box-shadow-btn-header-color: rgba(237, 237, 246, 0.2);
     --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
 
+    //============== Navbar =================
+    --dropdown-background: #fff;
+    --box-shadow-dropdown-color: rgba(200, 200, 200, 0.4);
+    --arrow-dropdown-color: #fff;
+
+    --border-right-top-menu-color: #d2d1d6;
+    --item-active-top-menu-color: #0071dc;
+
     //============== Body =================
     --body-background: #f6f6f6;
+
+    //============== Scroll bar =================
+    --scrollbar-thumb-color: rgba(22, 24, 35, 0.06);
+    --scrollbar-track-color: rgba(0, 0, 0, 0);
 }

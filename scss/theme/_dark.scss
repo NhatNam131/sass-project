@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(90%) sepia(99%) saturate(33%) hue-rotate(193deg) brightness(108%)
@@ -5,6 +7,10 @@ html.dark {
 
     //============== Header =================
     --header-background: rgba(23, 28, 40, 1);
+    @include abstracts.breakpoint(lg) {
+        --box-shadow-header-mobile-color: rgba(0, 0, 0, 0.2);
+    }
+
     --group-background: rgba(41, 46, 57, 1);
     --hover-btn-header-color: #000;
     --hover-btn-header-icon: brightness(0) saturate(100%) invert(0%) sepia(90%) saturate(7500%) hue-rotate(60deg)
@@ -14,6 +20,18 @@ html.dark {
     --box-shadow-btn-header-color: rgba(0, 0, 0, 0.2);
     --box-shadow-avatar-header-color: rgba(0, 0, 0, 0.08);
 
+    //============== Navbar =================
+    --dropdown-background: #2f3441;
+    --box-shadow-dropdown-color: rgba(23, 28, 40, 0.4);
+    --arrow-dropdown-color: brightness(0) saturate(100%) invert(14%) sepia(21%) saturate(722%) hue-rotate(185deg)
+        brightness(100%) contrast(84%);
+
+    --border-right-top-menu-color: #171c28;
+
     //============== Body =================
     --body-background: #292e39;
+
+    //============== Scroll bar =================
+    --scrollbar-thumb-color: rgba(237, 237, 246, 0.5);
+    --scrollbar-track-color: rgba(0, 0, 0, 0.05);
 }
