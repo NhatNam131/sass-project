@@ -27,15 +27,6 @@
     @include abstracts.breakpoint(md) {
         justify-content: space-between;
     }
-
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoint(lg) {
-            display: block;
-            margin-top: 0.5rem;
-        }
-    }
 }
 
 .navbar {
@@ -46,11 +37,50 @@
     }
 
     @include abstracts.breakpoint(lg) {
-        display: none;
+        position: fixed;
+        z-index: 9;
+        inset: 0 50% 0 0;
+        background: var(--sidebar-background);
+        margin-left: 0;
+        padding: 2rem 1.5rem;
+        border-radius: 0 2rem 2rem 0;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        overflow: hidden;
+
+        &.show {
+            transform: translateX(0);
+            box-shadow: 0px 40px 90px 20px var(--box-shadow-sidebar-color);
+        }
+
+        &.show ~ &__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
+
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    &__close-btn {
+        padding-left: 1.2rem;
     }
 
     &__list {
         @extend %flexItemCenter;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            height: calc(100% - 0.8rem);
+        }
     }
 
     &__item {
@@ -58,13 +88,32 @@
             .dropdown {
                 opacity: 1;
                 visibility: visible;
+                transition: opacity, visibility;
+                transition-duration: 0.5s;
+            }
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+
+            &:hover {
+                .dropdown {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            &--active {
+                .dropdown {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
             }
         }
     }
 
     &__link {
         position: relative;
-
         @extend %flexItemCenter;
         gap: 0.6rem;
         padding: 1.4rem 1.5rem;
@@ -81,10 +130,43 @@
             right: 0;
             height: 5.2rem;
         }
+
+        @include abstracts.breakpoint(lg) {
+            justify-content: space-between;
+            font-size: 1.6rem;
+            line-height: 150%;
+            padding-bottom: 0;
+
+            &::after {
+                content: none;
+            }
+        }
     }
 
     &__arrow {
         margin-top: 0.5rem;
+
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: 0.3s;
+        }
+    }
+
+    &__item--active &__arrow {
+        rotate: 0deg;
+    }
+
+    &__overlay {
+        opacity: 0;
+        visibility: hidden;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            background: rgba($color: #000000, $alpha: 0.4);
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+        }
     }
 }
 
@@ -101,16 +183,6 @@
         @extend %flexItemCenter;
         background: var(--group-background);
         border-radius: 0.8rem;
-
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
-    }
-
-    &__group--single {
-        @include abstracts.breakpoint(lg) {
-            display: none;
-        }
     }
 
     &__group--single &__btn {
@@ -162,5 +234,30 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.nav-btn {
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+
+    &__title,
+    &__quatity {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__title {
+        margin-left: 1.5rem;
+    }
+
+    &__quatity {
+        margin-left: auto;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0.6rem;
     }
 }

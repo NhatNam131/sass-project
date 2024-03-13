@@ -30,6 +30,7 @@ a {
     filter: var(--icon-color);
 }
 
+a,
 button,
 input,
 section,
@@ -37,6 +38,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
