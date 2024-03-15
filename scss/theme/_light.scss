@@ -7,7 +7,7 @@
 
     //============== Header =================
     --header-background: #eee;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-background: #fff;
         --box-shadow-header-mobile-color: rgba(237, 237, 246, 0.2);
     }
@@ -36,7 +36,16 @@
     --scrollbar-thumb-color: rgba(22, 24, 35, 0.06);
     --scrollbar-track-color: rgba(0, 0, 0, 0);
 
-    //============== Scroll bar =================
+    //============== Side bar =================
     --sidebar-background: #fff;
     --box-shadow-sidebar-color: rgba(200, 200, 200, 0.4);
+
+    //============== Categories =================
+    --item-categories-title-color: #000;
+    --item-categories-background: #eee;
+    --item-categories-image-background: #fff;
+
+    @include abstracts.screen(sm) {
+        --item-categories-background: #fff;
+    }
 }

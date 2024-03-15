@@ -1,0 +1,36 @@
+@use '../abstracts';
+
+.home {
+    &__container {
+        margin-top: 4rem;
+
+        @include abstracts.screen(md) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(sm) {
+            font-size: 2.2rem;
+            line-height: 145.455%;
+        }
+    }
+
+    &__categories {
+        --grid-gutter-x: 5.1rem;
+
+        @include abstracts.screen(lg) {
+            --grid-gutter-x: 2rem;
+        }
+
+        @include abstracts.screen(md) {
+            --grid-gutter-y: 2rem;
+            --grid-gutter-x: 0;
+        }
+    }
+}

@@ -1,12 +1,7 @@
 @use '../abstracts';
 
 .slideshow {
-    margin-top: 4rem;
     position: relative;
-
-    @include abstracts.breakpoint(md) {
-        margin-top: 3rem;
-    }
 
     &__inner {
         display: flex;
@@ -20,7 +15,7 @@
         flex-shrink: 0;
         padding-top: 34%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -49,7 +44,7 @@
         font-weight: 500;
         line-height: 144.444%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             gap: 2.6rem;
             font-size: 1.4rem;
             line-height: 142.87%;
@@ -72,7 +67,7 @@
             border: 0.4rem solid var(--color);
             border-radius: 50%;
 
-            @include abstracts.breakpoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 0.3rem;
             }
         }

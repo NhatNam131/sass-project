@@ -10,12 +10,12 @@
     padding: 3rem 0;
     background: var(--header-background);
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         padding: 1.6rem 0;
         box-shadow: 0px 20px 60px 10px var(--box-shadow-header-mobile-color);
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         padding: 2rem 0;
     }
 }
@@ -25,7 +25,7 @@
     position: relative;
     z-index: 99;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         justify-content: space-between;
     }
 }
@@ -33,11 +33,11 @@
 .navbar {
     margin-left: 12.9rem;
 
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
         margin-left: 2.9rem;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: fixed;
         z-index: 9;
         inset: 0 50% 0 0;
@@ -60,7 +60,7 @@
         }
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.screen(sm) {
         inset: 0 20% 0 0;
 
         padding-left: 0.5rem;
@@ -74,7 +74,7 @@
     &__list {
         @extend %flexItemCenter;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
 
@@ -83,7 +83,7 @@
             height: calc(100% - 2rem);
         }
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             height: calc(100% - 12rem);
         }
     }
@@ -98,7 +98,7 @@
             }
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
 
             &:hover {
@@ -136,7 +136,7 @@
             height: 5.2rem;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             justify-content: space-between;
             font-size: 1.6rem;
             line-height: 150%;
@@ -152,7 +152,7 @@
     &__arrow {
         margin-top: 0.5rem;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             rotate: -90deg;
             transition: 0.3s;
         }
@@ -166,7 +166,7 @@
         opacity: 0;
         visibility: hidden;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             position: fixed;
             inset: 0;
             background: rgba($color: #000000, $alpha: 0.4);
@@ -181,7 +181,7 @@
     gap: 2rem;
     margin-left: auto;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         margin-left: 0;
     }
 

@@ -7,7 +7,7 @@ html.dark {
 
     //============== Header =================
     --header-background: rgba(23, 28, 40, 1);
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --box-shadow-header-mobile-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -35,7 +35,12 @@ html.dark {
     --scrollbar-thumb-color: rgba(237, 237, 246, 0.5);
     --scrollbar-track-color: rgba(0, 0, 0, 0.05);
 
-    //============== Scroll bar =================
+    //============== Side bar =================
     --sidebar-background: #292e39;
     --box-shadow-sidebar-color: rgba(23, 28, 40, 0.4);
+
+    //============== Categories =================
+    --item-categories-title-color: #fff;
+    --item-categories-background: #171c28;
+    --item-categories-image-background: #292e39;
 }

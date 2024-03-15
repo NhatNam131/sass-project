@@ -30,35 +30,106 @@
             load('#header', './templates/header.html');
         </script>
 
-        <div class="container">
+        <div class="container home">
             <!-- =============== Main ================= -->
             <main>
-                <!-- =============== Slide show ================= -->
-                <section class="slideshow">
-                    <div class="slideshow__inner">
-                        <div class="slideshow__item">
-                            <a href="#!" class="slideshow__link">
-                                <picture>
-                                    <source
-                                        media="(max-width: 767.98px)"
-                                        srcset="./assets/images/slideshow/slide-1-md.png"
-                                    />
-                                    <img
-                                        src="./assets/images/slideshow/slide-1.png"
-                                        alt="Slide image"
-                                        class="slideshow__image"
-                                    />
-                                </picture>
-                            </a>
+                <section class="home__container">
+                    <!-- =============== Slide show ================= -->
+                    <section class="slideshow">
+                        <div class="slideshow__inner">
+                            <div class="slideshow__item">
+                                <a href="#!" class="slideshow__link">
+                                    <picture>
+                                        <source
+                                            media="(max-width: 767.98px)"
+                                            srcset="./assets/images/slideshow/slide-1-md.png"
+                                        />
+                                        <img
+                                            src="./assets/images/slideshow/slide-1.png"
+                                            alt="Slide image"
+                                            class="slideshow__image"
+                                        />
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="slideshow__page">
+                            <span class="slideshow__number">1</span>
+                            <span class="slideshow__slider"></span>
+                            <span class="slideshow__number">5</span>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- =============== Browse Categories ================= -->
+                <section class="home__container">
+                    <h2 class="home__heading">Browse Categories</h2>
+                    <div class="home__categories row row-cols-3 row-cols-md-1">
+                        <!-- Category item 1 -->
+                        <div class="col">
+                            <article class="categories-item">
+                                <a href="#!" class="categories-item__link">
+                                    <div class="categories-item__image">
+                                        <img
+                                            src="./assets/images/categories/item-1.png"
+                                            alt="Category"
+                                            class="categories-item__image-content"
+                                        />
+                                    </div>
+
+                                    <section class="categories-item__info">
+                                        <h3 class="categories-item__title">$24 - $150</h3>
+                                        <p class="categories-item__desc">New sumatra mandeling coffe blend</p>
+                                    </section>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Category item 2 -->
+                        <div class="col">
+                            <article class="categories-item">
+                                <a href="#!" class="categories-item__link">
+                                    <div class="categories-item__image">
+                                        <img
+                                            src="./assets/images/categories/item-2.png"
+                                            alt="Category"
+                                            class="categories-item__image-content"
+                                        />
+                                    </div>
+
+                                    <section class="categories-item__info">
+                                        <h3 class="categories-item__title">$37 - $160</h3>
+                                        <p class="categories-item__desc">Espresso arabica and robusta beans</p>
+                                    </section>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Category item 3 -->
+                        <div class="col">
+                            <article class="categories-item">
+                                <a href="#!" class="categories-item__link">
+                                    <div class="categories-item__image">
+                                        <img
+                                            src="./assets/images/categories/item-3.png"
+                                            alt="Category"
+                                            class="categories-item__image-content"
+                                        />
+                                    </div>
+
+                                    <section class="categories-item__info">
+                                        <h3 class="categories-item__title">$32 - $160</h3>
+                                        <p class="categories-item__desc">Lavazza top class whole bean coffee blend</p>
+                                    </section>
+                                </a>
+                            </article>
                         </div>
                     </div>
-
-                    <div class="slideshow__page">
-                        <span class="slideshow__number">1</span>
-                        <span class="slideshow__slider"></span>
-                        <span class="slideshow__number">5</span>
-                    </div>
                 </section>
+
+                <!-- =============== Products ================= -->
+                <section class="home__container"></section>
             </main>
 
             <!-- =============== Footer ================= -->
