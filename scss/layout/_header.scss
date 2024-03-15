@@ -23,6 +23,7 @@
 .top-bar {
     @extend %flexItemCenter;
     position: relative;
+    z-index: 99;
 
     @include abstracts.breakpoint(md) {
         justify-content: space-between;
@@ -79,7 +80,11 @@
 
             overflow-y: auto;
             overscroll-behavior: contain;
-            height: calc(100% - 0.8rem);
+            height: calc(100% - 2rem);
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 12rem);
         }
     }
 
@@ -135,6 +140,7 @@
             justify-content: space-between;
             font-size: 1.6rem;
             line-height: 150%;
+            padding-top: 1.4rem;
             padding-bottom: 0;
 
             &::after {
@@ -258,6 +264,6 @@
     }
 
     &:last-of-type {
-        margin-bottom: 0.6rem;
+        margin-bottom: 1.5rem;
     }
 }
