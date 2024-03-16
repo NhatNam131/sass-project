@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 /*================== Base ==================*/
 *,
 ::before,
@@ -45,4 +47,11 @@ button {
     border: none;
     padding: 0;
     background: transparent;
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
 }

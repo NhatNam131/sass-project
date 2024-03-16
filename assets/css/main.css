@@ -182,6 +182,13 @@ button {
   background: transparent;
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
 /*================== Grid system =====================*/
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
@@ -1969,6 +1976,125 @@ html *::-webkit-scrollbar-track {
   }
 }
 
+.product-item {
+  position: relative;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  background: var(--item-product-background);
+}
+.product-item__like-btn {
+  position: absolute;
+  bottom: 15.8rem;
+  right: 1.6rem;
+}
+.product-item__thumb {
+  width: 28rem;
+  height: 28.4rem;
+}
+@media (max-width: 1399.98px) {
+  .product-item__thumb {
+    width: 100%;
+    height: 23rem;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-item__thumb {
+    height: 27.4rem;
+  }
+}
+.product-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+.product-item__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.product-item__title:hover {
+  text-decoration: underline;
+}
+.product-item__company {
+  font-size: 1.5rem;
+  line-height: 146.667%;
+  color: #9e9da8;
+}
+.product-item__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.product-item__price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.product-item__review {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.product-item__review-quantity {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.filter__btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  background: var(--filter-background);
+}
+.filter__btn-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+@media (max-width: 767.98px) {
+  .filter__btn-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
+
+.like-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--item-product-favourite-background);
+  box-shadow: 0px 1rem 4rem var(--box-shadow-favourite-color);
+}
+.like-btn--liked .product-item__btn-icon {
+  display: none;
+}
+.like-btn:not(.like-btn--liked) .product-item__btn-icon--liked {
+  display: none;
+}
+
+.product-item__btn-icon--liked {
+  margin-top: 0.8rem;
+}
+
+.home {
+  padding-bottom: 3.9rem;
+}
 .home__container {
   margin-top: 4rem;
 }
@@ -1977,11 +2103,16 @@ html *::-webkit-scrollbar-track {
     margin-top: 3rem;
   }
 }
+.home__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .home__heading {
-  margin-bottom: 2rem;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+  margin-bottom: 2rem;
 }
 @media (max-width: 575.98px) {
   .home__heading {
@@ -1992,7 +2123,7 @@ html *::-webkit-scrollbar-track {
 .home__categories {
   --grid-gutter-x: 5.1rem;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .home__categories {
     --grid-gutter-x: 2rem;
   }
@@ -2001,6 +2132,17 @@ html *::-webkit-scrollbar-track {
   .home__categories {
     --grid-gutter-y: 2rem;
     --grid-gutter-x: 0;
+  }
+}
+@media (max-width: 1199.98px) {
+  .home__products {
+    --grid-gutter-x: 3rem;
+    --grid-gutter-y: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .home__products {
+    --grid-gutter-y: 2rem;
   }
 }
 
@@ -2030,6 +2172,10 @@ html *::-webkit-scrollbar-track {
   --item-categories-title-color: #000;
   --item-categories-background: #eee;
   --item-categories-image-background: #fff;
+  --filter-background: #fff;
+  --item-product-background: #fff;
+  --item-product-favourite-background: #fff;
+  --box-shadow-favourite-color: rgba(124, 124, 124, 0.2);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -2069,6 +2215,10 @@ html.dark {
   --item-categories-title-color: #fff;
   --item-categories-background: #171c28;
   --item-categories-image-background: #292e39;
+  --filter-background: #171c28;
+  --item-product-background: #171c28;
+  --item-product-favourite-background: #292e39;
+  --box-shadow-favourite-color: rgba(124, 124, 124, 0.3);
 }
 @media (max-width: 991.98px) {
   html.dark {

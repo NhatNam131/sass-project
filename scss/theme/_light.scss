@@ -48,4 +48,10 @@
     @include abstracts.screen(sm) {
         --item-categories-background: #fff;
     }
+
+    //============== Products =================
+    --filter-background: #fff;
+    --item-product-background: #fff;
+    --item-product-favourite-background: #fff;
+    --box-shadow-favourite-color: rgba(124, 124, 124, 0.2);
 }

@@ -1,6 +1,8 @@
 @use '../abstracts';
 
 .home {
+    padding-bottom: 3.9rem;
+
     &__container {
         margin-top: 4rem;
 
@@ -9,11 +11,17 @@
         }
     }
 
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__heading {
-        margin-bottom: 2rem;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+        margin-bottom: 2rem;
 
         @include abstracts.screen(sm) {
             font-size: 2.2rem;
@@ -24,13 +32,24 @@
     &__categories {
         --grid-gutter-x: 5.1rem;
 
-        @include abstracts.screen(lg) {
+        @include abstracts.screen(xl) {
             --grid-gutter-x: 2rem;
         }
 
         @include abstracts.screen(md) {
             --grid-gutter-y: 2rem;
             --grid-gutter-x: 0;
+        }
+    }
+
+    &__products {
+        @include abstracts.screen(xl) {
+            --grid-gutter-x: 3rem;
+            --grid-gutter-y: 3rem;
+        }
+
+        @include abstracts.screen(md) {
+            --grid-gutter-y: 2rem;
         }
     }
 }
