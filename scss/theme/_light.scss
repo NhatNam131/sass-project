@@ -54,4 +54,34 @@
     --item-product-background: #fff;
     --item-product-favourite-background: #fff;
     --box-shadow-favourite-color: rgba(124, 124, 124, 0.2);
+
+    //============== Filter =================
+    --filter-btn-color: #1a162e;
+    --filter-background: #fff;
+    --box-shadow-filter-color: rgba(200, 200, 200, 0.4);
+    --slider-filter-color: #d2d1d6;
+    --slider-circle-background: #fff;
+    --select-btn-background: #f8f8fb;
+
+    //============== Footer =================
+    --footer-background: #eee;
+    --footer-desc-color: #8d8d8d;
+    --footer-form-background: #fff;
+    --footer-submit-btn-color: #1a162e;
+    --footer-submit-btn-background: #ffb700;
+
+    //============== Auth =================
+    --auth-left-background: #fafafd;
+    --mobile-auth-left-background: #fff;
+    --auth-right-background: #fff;
+    --auth-right-title-color: #1a162e;
+    --auth-right-desc-color: #9e9da8;
+    --border-auth-input-color: #d2d1d6;
+    --placeholder-auth-input-color: #d2d1d6;
+    --form-error-message-color: rgb(242, 10, 10);
+    --checkbox-label-auth-color: #9e9da8;
+    --signin-btn-color: #1a162e;
+    --signin-btn-icon-color: brightness(0) saturate(100%) invert(10%) sepia(21%) saturate(1386%) hue-rotate(210deg)
+        brightness(97%) contrast(100%);
+    --auth-right-question-color: #9e9da8;
 }

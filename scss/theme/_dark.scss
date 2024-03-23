@@ -49,4 +49,37 @@ html.dark {
     --item-product-background: #171c28;
     --item-product-favourite-background: #292e39;
     --box-shadow-favourite-color: rgba(124, 124, 124, 0.3);
+
+    //============== Filter =================
+    --filter-btn-color: #d2d1d6;
+    --filter-background: #2f3441;
+    --filter-arrow-color: brightness(0) saturate(100%) invert(14%) sepia(21%) saturate(722%) hue-rotate(185deg)
+        brightness(100%) contrast(84%);
+    --box-shadow-filter-color: rgba(0, 0, 0, 0.4);
+    --select-btn-background: #171c28;
+    --slider-circle-background: #292e39;
+
+    //============== Footer =================
+    --footer-background: rgba(23, 28, 40, 1);
+    --footer-desc-color: #8d8d8d;
+    --footer-form-background: #2f3441;
+    --footer-submit-btn-color: #1a162e;
+
+    //============== Auth =================
+    --auth-left-background: #171c28;
+    --left-desc-color: #b9babe;
+    --auth-right-background: #292e39;
+    --auth-right-title-color: #b9babe;
+    --auth-right-desc-color: #9e9da8;
+    --border-auth-input-color: #b9babe;
+    --placeholder-auth-input-color: #b9babe;
+    --form-error-message-color: rgb(226, 97, 97);
+    --checkbox-label-auth-color: #b9babe;
+    --signin-btn-color: #b9babe;
+    --signin-btn-icon-color: brightness(0) saturate(100%) invert(82%) sepia(7%) saturate(120%) hue-rotate(191deg)
+        brightness(94%) contrast(81%);
+    --auth-right-question-color: #b9babe;
+
+    //============== Send to mail =================
+    --send-text-color: #b9babe;
 }

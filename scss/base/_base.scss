@@ -36,6 +36,7 @@ a,
 button,
 input,
 section,
+select,
 textarea {
     font-family: inherit;
     font-size: inherit;
@@ -43,9 +44,19 @@ textarea {
     -webkit-tap-highlight-color: transparent;
 }
 
+input {
+    outline: none;
+}
+
 button {
+    cursor: pointer;
     border: none;
     padding: 0;
+    background: transparent;
+}
+
+input,
+select {
     background: transparent;
 }
 

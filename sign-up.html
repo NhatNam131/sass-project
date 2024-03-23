@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign up | Grocerymart</title>
+
+        <!-- =============== Favicon ================= -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- =============== Font ================= -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- =============== CSS ================= -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <main class="auth">
+            <section class="auth__inner">
+                <div class="auth__left">
+                    <!-- Logo -->
+                    <a href="./" class="logo auth__left-logo d-none d-md-flex">
+                        <img src="./assets/icons/logo.svg" alt="Logo" class="logo__image" />
+                        <h1 class="logo__title">grocerymart</h1>
+                    </a>
+                    <div class="auth__image-wrap">
+                        <img src="./assets/images/sign-up/intro.png" alt="" class="auth__left-image" />
+                        <p class="auth__left-desc">
+                            The best of luxury brand values, high quality products, and innovative services
+                        </p>
+                    </div>
+                    <div class="dot d-none d-md-flex">
+                        <a href="#!" class="dot__link">
+                            <div class="dot__circle dot__circle--active"></div>
+                        </a>
+                        <a href="#!" class="dot__link">
+                            <div class="dot__circle"></div>
+                        </a>
+                        <a href="#!" class="dot__link js-toggle" toggle-target="#auth__right">
+                            <img src="./assets/icons/arrow-right.svg" alt="Arrow right" class="dot__arrow--right" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="auth__right hide" id="auth__right">
+                    <!-- Logo -->
+                    <a href="./" class="logo">
+                        <img src="./assets/icons/logo.svg" alt="Logo" class="logo__image" />
+                        <h1 class="logo__title">grocerymart</h1>
+                    </a>
+                    <h1 class="auth__right-title">Sign Up</h1>
+                    <p class="auth__right-desc">Let’s create your account and Shop like a pro and save money.</p>
+
+                    <form action="./sign-up.html" class="form__auth" id="form-signup">
+                        <div class="form__group">
+                            <div class="form__wrap-input">
+                                <input type="email" placeholder="Email" class="form__input" id="email" />
+                                <img src="./assets/icons/mail.svg" alt="Mail" />
+                            </div>
+                            <span class="form__message--error"></span>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__wrap-input">
+                                <input type="password" placeholder="Password" class="form__input" id="password" />
+                                <img src="./assets/icons/password.svg" alt="Password" />
+                            </div>
+                            <span class="form__message--error"></span>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__wrap-input">
+                                <input
+                                    type="password"
+                                    placeholder="Confirm Password"
+                                    class="form__input"
+                                    id="password_confirmation"
+                                />
+                                <img src="./assets/icons/password.svg" alt="Confirm Password" />
+                            </div>
+                            <span class="form__message--error"></span>
+                        </div>
+                        <div class="form__bottom">
+                            <div class="form__checkbox">
+                                <input type="checkbox" id="checkbox" class="form__checkbox--input" hidden />
+                                <label for="checkbox" class="form__checkbox--label">Set as default card</label>
+                            </div>
+                        </div>
+                        <div class="form__btn">
+                            <button class="btn btn--primary form__btn--auth">Sign Up</button>
+                            <button class="btn btn--outline form__btn--auth form__btn--auth-signin">
+                                <img src="./assets/icons/google.svg" alt="Google" class="form__btn--icon" />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="auth__question">
+                        <span class="auth__question--content">You have an account yet?</span>
+                        <a href="./sign-in.html" class="form__link auth__question--link">Sign In</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =============== Scripts ================= -->
+        <script>
+            window.dispatchEvent(new Event('template-loaded'));
+        </script>
+        <script src="./assets/scripts/validator.js"></script>
+        <script src="./assets/scripts/main.js"></script>
+    </body>
+</html>

@@ -43,6 +43,8 @@
     }
 
     &__products {
+        --grid-gutter-y: 3rem;
+
         @include abstracts.screen(xl) {
             --grid-gutter-x: 3rem;
             --grid-gutter-y: 3rem;

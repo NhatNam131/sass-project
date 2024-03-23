@@ -1,0 +1,192 @@
+@use '../abstracts';
+
+.footer {
+    margin-top: 3rem;
+    padding: 3rem 0;
+    background: var(--footer-background);
+
+    &__content {
+        display: flex;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+        }
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        color: var(--footer-desc-color);
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3rem;
+        width: 55%;
+        margin-left: auto;
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 5rem;
+        }
+
+        @include abstracts.screen(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__header {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 145.455%;
+
+        @include abstracts.screen(lg) {
+            font-size: 2rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__link {
+        color: var(--footer-desc-color);
+    }
+
+    &__contact {
+        display: grid;
+        grid-template-columns: repeat(3, 4rem);
+        column-gap: 2rem;
+        row-gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__social {
+        &--icon {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 0.1rem solid var(--footer-desc-color);
+
+        &--content {
+            @include abstracts.screen(lg) {
+                font-size: 1.4rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__cart {
+        width: 5rem;
+        height: 5rem;
+
+        @include abstracts.screen(lg) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    background: var(--footer-form-background);
+
+    &__header {
+        display: flex;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &--title {
+            max-width: 16rem;
+
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 145.55%;
+
+            @include abstracts.screen(lg) {
+                max-width: 100%;
+            }
+        }
+
+        &--desc {
+            max-width: 25rem;
+            margin-left: auto;
+
+            color: var(--footer-desc-color);
+
+            @include abstracts.screen(lg) {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__submit {
+        display: flex;
+        gap: 2rem;
+
+        &--input {
+            width: 22.8rem;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            outline: none;
+
+            &::placeholder {
+                color: var(--footer-desc-color);
+            }
+
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+        }
+
+        &--btn {
+            font-size: 1.5rem !important;
+            color: var(--footer-submit-btn-color);
+            background: var(--footer-submit-btn-background);
+        }
+    }
+}

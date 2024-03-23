@@ -8,6 +8,7 @@
     margin-bottom: 1rem;
     padding: 0.6rem 1.2rem;
     border-radius: 0.6rem;
+    color: var(--filter-btn-color);
     background: var(--filter-background);
 
     &-title {
@@ -23,7 +24,7 @@
     }
 }
 
-// Like button
+// Button
 .like-btn {
     cursor: pointer;
     display: flex;
@@ -46,4 +47,43 @@
 
 .product-item__btn-icon--liked {
     margin-top: 0.8rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    background: #f8f8fb;
+    font-size: 1.8rem;
+    font-weight: 500;
+    user-select: none;
+
+    &--text {
+        font-weight: 400;
+        color: #9e9da8;
+        background: transparent;
+    }
+
+    &--primary,
+    &--rounded {
+        background: #ffb700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 0.1rem solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 9.9rem;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
 }

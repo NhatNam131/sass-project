@@ -2,6 +2,7 @@
 
 .slideshow {
     position: relative;
+    z-index: -1;
 
     &__inner {
         display: flex;

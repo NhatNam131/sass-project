@@ -5,29 +5,9 @@
     align-items: center;
     gap: 1.4rem;
 
-    @include abstracts.screen(lg) {
-        gap: 1rem;
-        margin-left: 4rem;
-    }
-
-    @include abstracts.screen(md) {
-        margin-left: 0;
-    }
-
     &__title {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 145.455%;
-
-        @include abstracts.screen(lg) {
-            font-size: 1.8rem;
-            line-height: 144.444%;
-        }
-    }
-
-    &__image {
-        @include abstracts.screen(lg) {
-            width: 2.4rem;
-        }
     }
 }
