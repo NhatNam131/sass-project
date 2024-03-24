@@ -2082,23 +2082,45 @@ select {
   width: 40rem;
   object-fit: cover;
 }
+@media (max-width: 991.98px) {
+  .send__image {
+    width: 30rem;
+  }
+}
 .send__title {
   margin-top: 2rem;
   font-size: 4rem;
   font-weight: 500;
 }
+@media (max-width: 991.98px) {
+  .send__title {
+    font-size: 3rem;
+  }
+}
 .send__desc, .send__question {
   font-size: 2rem;
   line-height: 150.44%;
 }
+@media (max-width: 991.98px) {
+  .send__desc, .send__question {
+    font-size: 1.8rem;
+  }
+}
+.send__desc, .send__question {
+  text-align: center;
+}
 .send__desc {
   max-width: 100rem;
   margin-top: 3rem;
-  text-align: center;
   color: var(--send-text-color);
 }
 .send__question {
   margin-top: 6rem;
+}
+@media (max-width: 1199.98px) {
+  .send__desc, .send__question {
+    max-width: calc(100% - 4.8rem);
+  }
 }
 .send__strong {
   font-weight: 500;

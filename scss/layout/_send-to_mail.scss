@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .send {
     &__inner {
         display: flex;
@@ -9,6 +11,10 @@
     &__image {
         width: 40rem;
         object-fit: cover;
+
+        @include abstracts.screen(lg) {
+            width: 30rem;
+        }
     }
 
     &__title {
@@ -16,23 +22,42 @@
 
         font-size: 4rem;
         font-weight: 500;
+
+        @include abstracts.screen(lg) {
+            font-size: 3rem;
+        }
     }
 
     &__desc,
     &__question {
         font-size: 2rem;
         line-height: 150.44%;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__desc,
+    &__question {
+        text-align: center;
     }
 
     &__desc {
         max-width: 100rem;
         margin-top: 3rem;
-        text-align: center;
         color: var(--send-text-color);
     }
 
     &__question {
         margin-top: 6rem;
+    }
+
+    &__desc,
+    &__question {
+        @include abstracts.screen(xl) {
+            max-width: calc(100% - 4.8rem);
+        }
     }
 
     &__strong {

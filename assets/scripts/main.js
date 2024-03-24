@@ -243,3 +243,26 @@ Validator({
         window.location.replace('send-to-mail.html');
     },
 });
+
+// Create new password
+Validator({
+    form: '#form-new-password',
+    formGroupSelector: '.form__group',
+    errorSelector: '.form__message--error',
+    rules: [
+        Validator.isRequired('#password'),
+        Validator.maxLength('#password', 20),
+        Validator.minLength('#password', 6),
+        Validator.isRequired('#password_confirmation'),
+        Validator.isConfirmed(
+            '#password_confirmation',
+            function () {
+                return document.querySelector('#form-new-password #password').value;
+            },
+            'Re-entered password is incorrect',
+        ),
+    ],
+    onSubmit: function () {
+        window.location.replace('sign-in.html');
+    },
+});
