@@ -7,7 +7,7 @@
 
     //============== Header =================
     --header-background: #eee;
-    @include abstracts.screen(lg) {
+    @include abstracts.screen(sm) {
         --header-background: #fff;
         --box-shadow-header-mobile-color: rgba(237, 237, 246, 0.2);
     }
@@ -55,13 +55,15 @@
     --item-product-favourite-background: #fff;
     --box-shadow-favourite-color: rgba(124, 124, 124, 0.2);
 
+    //============== Form =================
+    --select-btn-background: #f8f8fb;
+
     //============== Filter =================
     --filter-btn-color: #1a162e;
     --filter-background: #fff;
     --box-shadow-filter-color: rgba(200, 200, 200, 0.4);
     --slider-filter-color: #d2d1d6;
     --slider-circle-background: #fff;
-    --select-btn-background: #f8f8fb;
 
     //============== Footer =================
     --footer-background: #eee;
@@ -84,4 +86,58 @@
     --signin-btn-icon-color: brightness(0) saturate(100%) invert(10%) sepia(21%) saturate(1386%) hue-rotate(210deg)
         brightness(97%) contrast(100%);
     --auth-right-question-color: #9e9da8;
+
+    //============== Breadcrumbs =================
+    --breadcrums-background: #f6f6f6;
+    --box-shadow-breadcrums: rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(sm) {
+        --breadcrums-background: #fff;
+    }
+
+    //============== Product detail =================
+    --product-detail-background: #fff;
+    --product-detail-content-bachground: #f6f6f6;
+    --produc-detail-content-text-color: #1a162e;
+    --product-detail-form-btn-bachground: #ededf6;
+    --product-detail-btn-text-color: #1a162e;
+    --product-detail-thumb-current-background: #eee;
+    --product-detail-preview-background: #fff;
+
+    @include abstracts.screen(sm) {
+        --product-detail-background: #fafafd;
+        --product-detail-content-bachground: #fff;
+    }
+
+    //============== Tab content =================
+    --tab-content-item-background: #fafafd;
+
+    @include abstracts.screen(sm) {
+        --tab-content-item-background: #fff;
+    }
+
+    //============== Search =================
+    --search-background: #f6f6f6;
+    --search-text-input-color: #9e9da8;
+
+    @include abstracts.screen(sm) {
+        --search-background: #fff;
+    }
+
+    //============== Cart =================
+    --cart-background: #fff;
+    --box-shadow-cart-color: rgba(200, 200, 200, 0.4);
+    --cart-item-background: rgba(0, 0, 0, 0.05);
+    --cart-text-color: #1a162e;
+
+    //============== Similar =================
+    --similar-item-background: #f6f6f6;
+
+    @include abstracts.screen(sm) {
+        --similar-item-background: #fff;
+    }
+
+    //============== Description =================
+    --blockquote-background: rgb(230 201 201 / 30%);
+    --underline-text-color: #ffb700;
 }

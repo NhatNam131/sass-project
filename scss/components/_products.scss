@@ -2,6 +2,7 @@
 
 .product-item {
     position: relative;
+    min-height: 100%;
     padding: 1.6rem;
     border-radius: 2rem;
     background: var(--item-product-background);
@@ -13,8 +14,7 @@
     }
 
     &__thumb {
-        width: 28rem;
-        height: 28.4rem;
+        width: 100%;
 
         @include abstracts.screen(xxl) {
             width: 100%;
@@ -24,6 +24,10 @@
 
         @include abstracts.screen(md) {
             height: 27.4rem;
+        }
+
+        &--similar {
+            height: 22rem;
         }
     }
 
@@ -77,5 +81,9 @@
             font-weight: 500;
             line-height: 150%;
         }
+    }
+
+    &__similar {
+        background: var(--similar-item-background);
     }
 }

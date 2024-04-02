@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Detail | Grocerymart</title>
+
+        <!-- =============== Favicon ================= -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- =============== Font ================= -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- =============== CSS ================= -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- =============== Scripts ================= -->
+        <script src="./assets/scripts/main.js"></script>
+    </head>
+    <body>
+        <!-- =============== Header ================= -->
+        <header id="header" class="header"></header>
+        <script>
+            load('#header', './templates/header-logined.html');
+        </script>
+
+        <!-- =============== Main ================= -->
+        <main>
+            <section class="detail">
+                <div class="container">
+                    <div class="detail__inner">
+                        <!-- Search -->
+                        <div class="search detail__search d-none d-lg-flex">
+                            <input placeholder="Search for item" class="search__input" />
+                            <button class="icon search__btn">
+                                <img src="./assets/icons/search.svg" alt="Search button" />
+                            </button>
+                        </div>
+
+                        <!-- Breadcrumbs -->
+                        <ul class="breadcrumbs detail__breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a href="#!" class="breadcrumbs__link">Departments</a>
+                                <img
+                                    src="./assets/icons/arrow-right-detail.svg"
+                                    alt="Arrow right"
+                                    class="breadcrumbs__arrow"
+                                />
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#!" class="breadcrumbs__link">Coffee</a>
+                                <img
+                                    src="./assets/icons/arrow-right-detail.svg"
+                                    alt="Arrow right"
+                                    class="breadcrumbs__arrow"
+                                />
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#!" class="breadcrumbs__link">Coffee Beans</a>
+                                <img
+                                    src="./assets/icons/arrow-right-detail.svg"
+                                    alt="Arrow right"
+                                    class="breadcrumbs__arrow"
+                                />
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">LavAzza</a>
+                            </li>
+                        </ul>
+
+                        <!-- Product -->
+                        <div class="row row-cols-2 row-cols-lg-1 detail-product">
+                            <div class="col-5">
+                                <div class="detail-preview">
+                                    <div class="detail-preview__list">
+                                        <div class="detail-preview__item">
+                                            <img
+                                                src="./assets/images/products/item-1.png"
+                                                alt="Product"
+                                                class="detail-preview__image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__item">
+                                            <img
+                                                src="./assets/images/products/item-2.png"
+                                                alt="Product"
+                                                class="detail-preview__image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__item">
+                                            <img
+                                                src="./assets/images/products/item-3.png"
+                                                alt="Product"
+                                                class="detail-preview__image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__item">
+                                            <img
+                                                src="./assets/images/products/item-4.png"
+                                                alt="Product"
+                                                class="detail-preview__image"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <!-- Thumb -->
+                                    <div class="detail-preview__thumb">
+                                        <div class="detail-preview__thumb-item detail-preview__thumb-item--current">
+                                            <img
+                                                src="./assets/images/products/item-1.png"
+                                                alt="Product"
+                                                class="detail-preview__thumb-image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__thumb-item">
+                                            <img
+                                                src="./assets/images/products/item-2.png"
+                                                alt="Product"
+                                                class="detail-preview__thumb-image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__thumb-item">
+                                            <img
+                                                src="./assets/images/products/item-3.png"
+                                                alt="Product"
+                                                class="detail-preview__thumb-image"
+                                            />
+                                        </div>
+                                        <div class="detail-preview__thumb-item">
+                                            <img
+                                                src="./assets/images/products/item-4.png"
+                                                alt="Product"
+                                                class="detail-preview__thumb-image"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-7">
+                                <form action="" class="form">
+                                    <section class="detail-content">
+                                        <h1 class="detail-content__title">
+                                            Coffee Beans - Espresso Arabica and Robusta Beans
+                                        </h1>
+                                        <div class="row row-cols-sm-1 detail-content__row">
+                                            <div class="col-5 detail-content__left">
+                                                <div class="detail-content__rating">
+                                                    <img
+                                                        src="./assets/icons/star.svg"
+                                                        alt="Star"
+                                                        class="detail-content__rating-star"
+                                                    />
+                                                    <span class="detail-content__rating-quantity"
+                                                        >(3.5) 1100 reviews</span
+                                                    >
+                                                </div>
+
+                                                <div class="form__col detail-content__form">
+                                                    <label for="" class="form__label detail-content__form--label"
+                                                        >Size/Weight</label
+                                                    >
+
+                                                    <div
+                                                        class="form__group--horizontal form__select--wrap detail-content__form-select--wrap"
+                                                    >
+                                                        <select
+                                                            name="quantity"
+                                                            id="quantity"
+                                                            class="form__select--input detail-content__form--input"
+                                                        >
+                                                            <option value="volvo">500</option>
+                                                            <option value="saab">1000</option>
+                                                            <option value="mercedes">10000</option>
+                                                            <option value="audi">100000</option>
+                                                        </select>
+
+                                                        <div class="form__border"></div>
+
+                                                        <select
+                                                            name="unit"
+                                                            id="unit"
+                                                            class="form__select--input detail-content__form--input"
+                                                        >
+                                                            <option value="volvo">Gram</option>
+                                                            <option value="saab">Decagram</option>
+                                                            <option value="mercedes">Hectogram</option>
+                                                            <option value="audi">Kilogram</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form__tag--wrap">
+                                                        <button class="form__tag--btn detail-content__form--btn">
+                                                            Small
+                                                        </button>
+                                                        <button class="form__tag--btn detail-content__form--btn">
+                                                            Medium
+                                                        </button>
+                                                        <button class="form__tag--btn detail-content__form--btn">
+                                                            Large
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6 detail-content__right">
+                                                <div class="detail-content__group">
+                                                    <img
+                                                        src="./assets/icons/compare.svg"
+                                                        alt="Compare"
+                                                        class="icon detail-content__icon"
+                                                    />
+                                                    <h2 class="detail-content__topic">Compare</h2>
+                                                </div>
+                                                <div class="detail-content__group">
+                                                    <img
+                                                        src="./assets/icons/delivery.svg"
+                                                        alt="Delivery"
+                                                        class="icon detail-content__icon"
+                                                    />
+                                                    <div class="detail-content__group--right">
+                                                        <h2 class="detail-content__topic">Delivery</h2>
+                                                        <span class="detail-content__desc">From $6 for 1-3 days</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-content__group">
+                                                    <img
+                                                        src="./assets/icons/pickup.svg"
+                                                        alt="Pickup"
+                                                        class="icon detail-content__icon"
+                                                    />
+                                                    <div class="detail-content__group--header">
+                                                        <h2 class="detail-content__topic">Pickup</h2>
+                                                        <span class="detail-content__desc">Out of 2 store, today</span>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-content__cart">
+                                                    <div class="detail-content__cart--header">
+                                                        <span class="detail-content__cart-price--old">$500.00</span>
+                                                        <span class="detail-content__cart--percent">10%</span>
+                                                    </div>
+                                                    <span class="detail-content__cart-price--new">$540.00</span>
+                                                    <div class="detail-content__cart--cta">
+                                                        <button class="btn btn--primary detail-content__cart--add">
+                                                            Add to cart
+                                                        </button>
+                                                        <button class="btn btn--outline detail-content__cart--favorite">
+                                                            <img
+                                                                src="./assets/icons/heart.svg"
+                                                                alt="Add to favorite"
+                                                                class="icon"
+                                                            />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Product tab -->
+                        <div class="detail-tab js-tabs">
+                            <ul class="detail-tab__list">
+                                <li class="detail-tab__item detail-tab__item--active">
+                                    <a href="#!" class="detail-tab__link">Description</a>
+                                </li>
+                                <li class="detail-tab__item">
+                                    <a href="#!" class="detail-tab__link">Features</a>
+                                </li>
+                                <li class="detail-tab__item">
+                                    <a href="#!" class="detail-tab__link">Review (1100)</a>
+                                </li>
+                                <li class="detail-tab__item">
+                                    <a href="#!" class="detail-tab__link">Similar</a>
+                                </li>
+                            </ul>
+                            <div class="detail-tab__contents">
+                                <!-- Description content -->
+                                <section class="detail-tab__content detail-tab__content--active">
+                                    <div class="row">
+                                        <div class="col-8 col-lg-12">
+                                            <div class="text-content">
+                                                <h2>Lorem ipsum dolor sit amet.</h2>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet <u>consectetur</u>, adipisicing elit.
+                                                    Facilis, in ut? Error cumque, unde, optio minus fugit consectetur
+                                                    quas esse ipsa doloremque est possimus, voluptas at. Minima expedita
+                                                    tenetur harum.
+                                                </p>
+                                                <blockquote>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur,
+                                                        <i><u>adipisicing</u></i> elit. Facilis, in ut? Error cumque,
+                                                        unde, optio minus fugit consectetur quas esse ipsa doloremque
+                                                        est possimus, voluptas at. Minima expedita tenetur harum.
+                                                    </p>
+                                                </blockquote>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+                                                    in ut? Error cumque, unde, optio minus fugit consectetur quas esse
+                                                    ipsa doloremque est possimus, voluptas at. Minima expedita tenetur
+                                                    harum.
+                                                </p>
+                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+                                                    in ut? Error cumque, unde, optio minus fugit consectetur quas esse
+                                                    ipsa doloremque est possimus, voluptas at. Minima expedita tenetur
+                                                    harum.
+                                                </p>
+                                                <p>
+                                                    <img src="./assets/images/products/item-2.png" alt="" />
+                                                    <em>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                                                        quisquam!
+                                                    </em>
+                                                </p>
+                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+                                                    in ut? Error cumque, unde, optio minus fugit consectetur quas esse
+                                                    ipsa doloremque est possimus, voluptas at. Minima expedita tenetur
+                                                    harum.
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+                                                    in ut? Error cumque, unde, optio minus fugit consectetur quas esse
+                                                    ipsa doloremque est possimus, voluptas at. Minima expedita tenetur
+                                                    harum.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- Features content -->
+                                <section class="detail-tab__content">Content</section>
+
+                                <!-- Review content -->
+                                <section class="detail-tab__content">
+                                    <h2 class="detail-tab__content-title">What our customers are saying</h2>
+                                    <div class="row row-cols-3 row-cols-lg-1 gx-xl-2 gy-lg-2 detail-tab__content-list">
+                                        <!-- Item 1 -->
+                                        <div class="col">
+                                            <div class="detail-tab__content-item">
+                                                <div class="detail-tab__content-horizontal detail-tab__content-top">
+                                                    <img
+                                                        src="./assets/images/products/avatar-1.jpg"
+                                                        alt="Avatar"
+                                                        class="detail-tab__content-image"
+                                                    />
+                                                    <div class="detail-tab__content-vertical detail-tab__content-info">
+                                                        <h3 class="detail-tab__content-name">Jakir Hussen</h3>
+                                                        <p class="detail-tab__content-desc">
+                                                            Great product, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-tab__content-horizontal detail-tab__content-bottom">
+                                                    <img
+                                                        src="./assets/icons/review-stars.svg"
+                                                        alt="Stars"
+                                                        class="detail-tab__content-star"
+                                                    />
+                                                    <span class="detail-tab__content-quantity">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="col">
+                                            <div class="detail-tab__content-item">
+                                                <div class="detail-tab__content-horizontal detail-tab__content-top">
+                                                    <img
+                                                        src="./assets/images/products/avatar-2.jpg"
+                                                        alt="Avatar"
+                                                        class="detail-tab__content-image"
+                                                    />
+                                                    <div class="detail-tab__content-vertical detail-tab__content-info">
+                                                        <h3 class="detail-tab__content-name">Jubed Ahmed</h3>
+                                                        <p class="detail-tab__content-desc">
+                                                            Awesome Coffee, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-tab__content-horizontal detail-tab__content-bottom">
+                                                    <img
+                                                        src="./assets/icons/review-stars.svg"
+                                                        alt="Stars"
+                                                        class="detail-tab__content-star"
+                                                    />
+                                                    <span class="detail-tab__content-quantity">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Item 3 -->
+                                        <div class="col">
+                                            <div class="detail-tab__content-item">
+                                                <div class="detail-tab__content-horizontal detail-tab__content-top">
+                                                    <img
+                                                        src="./assets/images/products/avatar-3.jpg"
+                                                        alt="Avatar"
+                                                        class="detail-tab__content-image"
+                                                    />
+                                                    <div class="detail-tab__content-vertical detail-tab__content-info">
+                                                        <h3 class="detail-tab__content-name">Delwar Hussain</h3>
+                                                        <p class="detail-tab__content-desc">
+                                                            Great product, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-tab__content-horizontal detail-tab__content-bottom">
+                                                    <img
+                                                        src="./assets/icons/review-stars.svg"
+                                                        alt="Stars"
+                                                        class="detail-tab__content-star"
+                                                    />
+                                                    <span class="detail-tab__content-quantity">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- Similar content -->
+                                <section class="detail-tab__content">
+                                    <h2 class="detail-tab__content-title">Similar items you might like</h2>
+                                    <div
+                                        class="home__products row row-cols-6 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-1 gx-2"
+                                    >
+                                        <!-- Project item 1 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-1.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Coffee Beans - Espresso Arabica and Robusta Beans
+                                                        </h3>
+                                                    </a>
+
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$47.00</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">4.3</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart-red.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+
+                                        <!-- Project item 2 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-2.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Lavazza Coffee Blends - Try the Italian Espresso
+                                                        </h3>
+                                                    </a>
+
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$53.00</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">3.4</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart-red.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+
+                                        <!-- Project item 3 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-3.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Lavazza - Caffè Espresso Black Tin - Ground coffee
+                                                        </h3>
+                                                    </a>
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$99.99</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">5.0</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart-red.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+
+                                        <!-- Project item 4 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-4.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                                        </h3>
+                                                    </a>
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$38.65</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">4.4</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+
+                                        <!-- Project item 5 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-1.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Coffee Beans - Espresso Arabica and Robusta Beans
+                                                        </h3>
+                                                    </a>
+
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$47.00</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">4.3</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart-red.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+
+                                        <!-- Project item 6 -->
+                                        <div class="col">
+                                            <article class="product-item product-item__similar">
+                                                <a href="./product-detail.html" class="product-item__link">
+                                                    <div class="product-item__thumb product-item__thumb--similar">
+                                                        <img
+                                                            src="./assets/images/products/item-2.png"
+                                                            alt="Project"
+                                                            class="product-item__image"
+                                                        />
+                                                    </div>
+                                                </a>
+
+                                                <div class="product-item__info">
+                                                    <a href="./product-detail.html" class="product-item__link">
+                                                        <h3 class="product-item__title">
+                                                            Lavazza Coffee Blends - Try the Italian Espresso
+                                                        </h3>
+                                                    </a>
+
+                                                    <span class="product-item__company">Lavazza</span>
+                                                    <div class="product-item__bottom">
+                                                        <strong class="product-item__price">$53.00</strong>
+                                                        <div class="product-item__review">
+                                                            <img
+                                                                src="./assets/icons/star.svg"
+                                                                alt="Star"
+                                                                class="product-item__review-star"
+                                                            />
+                                                            <strong class="product-item__review-quantity">3.4</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="like-btn product-item__like-btn">
+                                                    <img
+                                                        src="./assets/icons/heart.svg"
+                                                        alt="Favourite"
+                                                        class="icon product-item__btn-icon"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/heart-red.svg"
+                                                        alt="Favourite"
+                                                        class="product-item__btn-icon--liked"
+                                                    />
+                                                </button>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =============== Footer ================= -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load('#footer', './templates/footer.html');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+.search {
+    display: flex;
+    gap: 1rem;
+    border-radius: 1rem;
+
+    background: var(--search-background);
+
+    &__input {
+        flex: 1;
+        padding-left: 1.5rem;
+        border: none;
+
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+
+        &::placeholder {
+            font-weight: 400;
+
+            color: var(--search-text-input-color);
+        }
+    }
+
+    &__btn {
+        padding: 1.2rem 1.5rem;
+    }
+}

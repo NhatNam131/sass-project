@@ -1,0 +1,78 @@
+.text-content {
+    font-size: 1.6rem;
+    line-height: 144.45%;
+
+    text-align: justify;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    img,
+    ul,
+    ol {
+        margin: 2rem 0;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    blockquote {
+        padding: 2rem;
+        border-left: 0.3rem solid #ffb700;
+        background: var(--blockquote-background);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    img + em {
+        display: block;
+        text-align: center;
+    }
+
+    u {
+        color: var(--underline-text-color);
+    }
+}

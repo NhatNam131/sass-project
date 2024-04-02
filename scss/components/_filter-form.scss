@@ -16,6 +16,10 @@
     transition: opacity, visibility;
     transition-duration: 0.1s;
 
+    @include abstracts.screen(md) {
+        width: 60vw;
+    }
+
     @include abstracts.screen(sm) {
         position: fixed;
         inset: 0;
@@ -132,22 +136,6 @@
         }
     }
 
-    &__heading,
-    &__form-label {
-        font-size: 2.2rem;
-        font-weight: 500;
-        line-height: 145.455%;
-    }
-
-    &__form-label {
-        display: block;
-
-        &--small {
-            font-size: 1.4rem;
-            line-height: 142.857%;
-        }
-    }
-
     &__form-slider {
         position: relative;
         width: 100%;
@@ -178,12 +166,6 @@
         }
     }
 
-    &__form-group--horizontal {
-        margin-top: 3rem;
-        display: flex;
-        gap: 3rem;
-    }
-
     &__form-input {
         margin-top: 1rem;
         width: 12.1rem;
@@ -196,68 +178,9 @@
         font-weight: 500;
         line-height: 142.857%;
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(xl) {
             width: 100%;
         }
-    }
-
-    &__form-select--wrap {
-        gap: 1.4rem;
-        height: 4.5rem;
-        padding: 0.5rem 1.4rem;
-        border-radius: 0.6rem;
-        border: 1px solid #d2d1d6;
-    }
-
-    &__form-select--input,
-    &__select-btn {
-        height: 100%;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 142.857%;
-
-        @include abstracts.screen(md) {
-            font-weight: 400;
-        }
-    }
-
-    &__form-select--input {
-        cursor: pointer;
-        border: none;
-        outline: none;
-
-        &:first-child {
-            width: 12rem;
-            @include abstracts.screen(md) {
-                width: 100%;
-            }
-        }
-
-        &:nth-child(2) {
-            width: 8rem;
-            @include abstracts.screen(md) {
-                width: 100%;
-            }
-        }
-    }
-
-    &__form-border {
-        width: 0.1rem;
-        background: #d2d1d6;
-    }
-
-    &__form-btn--wrap {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem 2rem;
-    }
-
-    &__select-btn {
-        padding: 0.6rem 1.2rem;
-        border-radius: 0.6rem;
-        background: var(--select-btn-background);
-        color: #9e9da8;
     }
 
     &__form-search {

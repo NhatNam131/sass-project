@@ -4572,10 +4572,84 @@
 
                 <div class="top-action__separate"></div>
 
-                <button class="top-action__btn">
-                    <img src="./assets/icons/cart.svg" alt="Cart" class="icon top-action__icon" />
-                    <span class="top-action__title">$65.42</span>
-                </button>
+                <div class="top-action__wrap">
+                    <button class="top-action__btn js-toggle" toggle-target="#header-cart">
+                        <img src="./assets/icons/cart.svg" alt="Cart" class="icon top-action__icon" />
+                        <span class="top-action__title">$65.42</span>
+                    </button>
+
+                    <div class="cart hide" id="header-cart">
+                        <img src="./assets/icons/arrow-filter.svg" alt="Arrow" class="cart__arrow" />
+                        <div class="cart-header">
+                            <div class="cart-header__heading">You have 3 item</div>
+                            <a href="#!" class="cart-header__link">See All</a>
+                        </div>
+
+                        <div class="cart__list">
+                            <!-- Item 1 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-1.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Lavazza Coffee Blends</div>
+                                <span class="cart__price">$329.00</span>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-2.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Coffee Beans Espresso</div>
+                                <span class="cart__price">$39.99</span>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-3.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Qualità Oro Mountain</div>
+                                <span class="cart__price">$47.00</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-bill">
+                            <div class="cart-bill__row">
+                                <div class="cart-bill__title">Subtotal:</div>
+                                <span class="cart-bill__price">$415.99</span>
+                            </div>
+                            <div class="cart-bill__row">
+                                <div class="cart-bill__title">Texes:</div>
+                                <span class="cart-bill__price">Free</span>
+                            </div>
+                            <div class="cart-bill__row">
+                                <div class="cart-bill__title">Shipping</div>
+                                <span class="cart-bill__price">$10.00</span>
+                            </div>
+                            <div class="cart-bill__row cart-bill__row--bold">
+                                <div class="cart-bill__title">Total Price</div>
+                                <span class="cart-bill__price">$425.99</span>
+                            </div>
+                        </div>
+
+                        <div class="cart__cta">
+                            <button class="btn btn--rounded btn--primary cart__cta-btn">Check Out All</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="top-action__user">

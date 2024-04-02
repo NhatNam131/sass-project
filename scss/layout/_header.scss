@@ -219,6 +219,10 @@
         padding: 1.3rem;
     }
 
+    &__wrap {
+        position: relative;
+    }
+
     &__btn {
         cursor: pointer;
         @extend %flexItemCenter;

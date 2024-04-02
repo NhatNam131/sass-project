@@ -7,7 +7,7 @@ html.dark {
 
     //============== Header =================
     --header-background: rgba(23, 28, 40, 1);
-    @include abstracts.screen(lg) {
+    @include abstracts.screen(md) {
         --box-shadow-header-mobile-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -82,4 +82,32 @@ html.dark {
 
     //============== Send to mail =================
     --send-text-color: #b9babe;
+
+    //============== Breadcrumbs =================
+    --breadcrums-background: #171c28;
+    --box-shadow-breadcrums: rgba(23, 28, 40, 0.2);
+
+    //============== Product detail =================
+    --product-detail-background: #292e39;
+    --product-detail-content-bachground: #171c28;
+    --produc-detail-content-text-color: #eee;
+    --product-detail-form-btn-bachground: #292e39;
+    --product-detail-thumb-current-background: #7e7d7d;
+    --product-detail-preview-background: #171c28;
+
+    //============== Tab content =================
+    --tab-content-item-background: #171c28;
+
+    //============== Search =================
+    --search-background: #171c28;
+    --search-text-input-color: #b9babe;
+
+    //============== Cart =================
+    --cart-background: #292e39;
+    --box-shadow-cart-color: rgba(23, 28, 40, 0.4);
+    --cart-item-background: rgba(0, 0, 0, 0.05);
+    --cart-text-color: #b9babe;
+
+    //============== Similar =================
+    --similar-item-background: rgba(23, 28, 40, 1);
 }
