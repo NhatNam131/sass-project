@@ -1,7 +1,7 @@
 .cart {
     position: absolute;
     z-index: 1;
-    bottom: -76rem;
+    bottom: -70rem;
     right: -7rem;
     padding: 3rem;
     border-radius: 2rem;
@@ -9,6 +9,11 @@
     color: var(--cart-text-color);
     background: var(--cart-background);
     box-shadow: 0px 40px 90px 20px var(--box-shadow-cart-color);
+
+    &-favourite {
+        bottom: -46rem;
+        right: -8rem;
+    }
 
     &__arrow {
         position: absolute;
@@ -33,13 +38,13 @@
         justify-content: space-between;
 
         &__heading {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 500;
             line-height: 145.455%;
         }
 
         &__link {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             line-height: 145.455%;
 
             color: #0071dc;
@@ -92,7 +97,7 @@
         border-top: 0.1rem solid #d2d1d6;
         border-bottom: 0.1rem solid #d2d1d6;
 
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         line-height: 145.455%;
 
         &__row {
@@ -111,9 +116,9 @@
         margin-top: 3rem;
 
         &-btn {
-            padding: 1.8rem 6.7rem;
+            padding: 1.6rem 6.7rem;
 
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             line-height: 145.455%;
         }
     }

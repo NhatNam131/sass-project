@@ -2746,13 +2746,17 @@ html *::-webkit-scrollbar-track {
 .cart {
   position: absolute;
   z-index: 1;
-  bottom: -76rem;
+  bottom: -70rem;
   right: -7rem;
   padding: 3rem;
   border-radius: 2rem;
   color: var(--cart-text-color);
   background: var(--cart-background);
   box-shadow: 0px 40px 90px 20px var(--box-shadow-cart-color);
+}
+.cart-favourite {
+  bottom: -46rem;
+  right: -8rem;
 }
 .cart__arrow {
   position: absolute;
@@ -2774,12 +2778,12 @@ html *::-webkit-scrollbar-track {
   justify-content: space-between;
 }
 .cart-header__heading {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 145.455%;
 }
 .cart-header__link {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 145.455%;
   color: #0071dc;
 }
@@ -2818,7 +2822,7 @@ html *::-webkit-scrollbar-track {
   padding: 3rem 0;
   border-top: 0.1rem solid #d2d1d6;
   border-bottom: 0.1rem solid #d2d1d6;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 145.455%;
 }
 .cart-bill__row {
@@ -2834,8 +2838,8 @@ html *::-webkit-scrollbar-track {
   margin-top: 3rem;
 }
 .cart__cta-btn {
-  padding: 1.8rem 6.7rem;
-  font-size: 2.2rem;
+  padding: 1.6rem 6.7rem;
+  font-size: 1.8rem;
   line-height: 145.455%;
 }
 

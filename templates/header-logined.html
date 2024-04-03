@@ -1035,7 +1035,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <!-- Sub-Menu Column 3: Bedroom -->
+                                                        <!-- Sub-Menu Column 3 Bedroom -->
                                                         <div class="sub-menu__column">
                                                             <!-- Menu column 1 -->
                                                             <div class="menu-column">
@@ -1086,7 +1086,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <!-- Sub-Menu Column 4: Home Decor -->
+                                                        <!-- Sub-Menu Column 4 Home Decor -->
                                                         <div class="sub-menu__column">
                                                             <!-- Menu column 1 -->
                                                             <div class="menu-column">
@@ -1288,7 +1288,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <!-- Sub-Menu Column 3: Educational Toys -->
+                                                        <!-- Sub-Menu Column 3 Educational Toys -->
                                                         <div class="sub-menu__column">
                                                             <!-- Menu column 1 -->
                                                             <div class="menu-column">
@@ -1387,7 +1387,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <!-- Sub-Menu Column 5: Dolls & Plush -->
+                                                        <!-- Sub-Menu Column 5 Dolls & Plush -->
                                                         <div class="sub-menu__column">
                                                             <!-- Menu column 1 -->
                                                             <div class="menu-column">
@@ -4565,10 +4565,65 @@
             </div>
 
             <div class="top-action__group d-md-none">
-                <button class="top-action__btn">
-                    <img src="./assets/icons/heart.svg" alt="Heart" class="icon top-action__icon" />
-                    <span class="top-action__title">03</span>
-                </button>
+                <div class="top-action__wrap">
+                    <button class="top-action__btn js-toggle" toggle-target="#header-favourite">
+                        <img src="./assets/icons/heart.svg" alt="Heart" class="icon top-action__icon" />
+                        <span class="top-action__title">03</span>
+                    </button>
+
+                    <div class="cart cart-favourite hide" id="header-favourite">
+                        <img src="./assets/icons/arrow-filter.svg" alt="Arrow" class="cart__arrow" />
+                        <div class="cart-header">
+                            <div class="cart-header__heading">You have 3 item(s)</div>
+                            <a href="#!" class="cart-header__link">See All</a>
+                        </div>
+
+                        <div class="cart__list">
+                            <!-- Item 1 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-1.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Lavazza Coffee Blends</div>
+                                <span class="cart__price">$329.00</span>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-2.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Coffee Beans Espresso</div>
+                                <span class="cart__price">$39.99</span>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="cart__item">
+                                <figure class="cart__image">
+                                    <img
+                                        src="./assets/images/products/item-3.png"
+                                        alt="Cart image"
+                                        class="cart__image-content"
+                                    />
+                                </figure>
+                                <div class="cart__desc">Qualità Oro Mountain</div>
+                                <span class="cart__price">$47.00</span>
+                            </div>
+                        </div>
+
+                        <div class="cart__cta">
+                            <a href="#!" class="btn btn--rounded btn--primary cart__cta-btn">Check Out All</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="top-action__separate"></div>
 
@@ -4628,11 +4683,11 @@
 
                         <div class="cart-bill">
                             <div class="cart-bill__row">
-                                <div class="cart-bill__title">Subtotal:</div>
+                                <div class="cart-bill__title">Subtotal</div>
                                 <span class="cart-bill__price">$415.99</span>
                             </div>
                             <div class="cart-bill__row">
-                                <div class="cart-bill__title">Texes:</div>
+                                <div class="cart-bill__title">Texes</div>
                                 <span class="cart-bill__price">Free</span>
                             </div>
                             <div class="cart-bill__row">
@@ -4646,7 +4701,7 @@
                         </div>
 
                         <div class="cart__cta">
-                            <button class="btn btn--rounded btn--primary cart__cta-btn">Check Out All</button>
+                            <a href="#!" class="btn btn--rounded btn--primary cart__cta-btn">Check Out All</a>
                         </div>
                     </div>
                 </div>
