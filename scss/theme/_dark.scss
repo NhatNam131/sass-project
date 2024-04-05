@@ -4,6 +4,8 @@ html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(90%) sepia(99%) saturate(33%) hue-rotate(193deg) brightness(108%)
         contrast(99%);
+    --icon-opacity-color: brightness(0) saturate(100%) invert(71%) sepia(6%) saturate(134%) hue-rotate(191deg)
+        brightness(104%) contrast(92%);
 
     //============== Header =================
     --header-background: rgba(23, 28, 40, 1);
@@ -110,4 +112,14 @@ html.dark {
 
     //============== Similar =================
     --similar-item-background: rgba(23, 28, 40, 1);
+
+    //============== Checkout =================
+    --checkout-background: #171c28;
+    --checkout-text-color: #b9babe;
+    --checkout-boder-color: #292e39;
+    --gift-image-background: #292e39;
+
+    //============== Dialog =================
+    --dialog-background: #2f3441;
+    --box-shadow-dialog-color: rgba(23, 28, 40, 0.4);
 }

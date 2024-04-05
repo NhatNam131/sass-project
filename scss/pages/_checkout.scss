@@ -1,0 +1,490 @@
+@use '../abstracts';
+
+.checkout {
+    margin: 3rem 0 4rem;
+
+    &__breadcrumbs {
+        background: var(--checkout-background);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 3rem;
+    }
+
+    &__list {
+        padding: 0 3rem 3rem;
+        border-radius: 2rem;
+
+        color: var(--checkout-text-color);
+        background: var(--checkout-background);
+
+        @include abstracts.screen(xl) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        @include abstracts.screen(lg) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__horizontal {
+        display: flex;
+    }
+
+    &__content {
+        flex: 1;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-left: 1.6rem;
+        }
+    }
+
+    &__middle {
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(xl) {
+            font-size: 1.6rem;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__sparate {
+        width: 0.2rem;
+        height: 1.7rem;
+        background: #9e9da8;
+    }
+
+    &__item {
+        padding: 3rem 0;
+        border-bottom: 0.1rem solid var(--checkout-boder-color);
+
+        @include abstracts.screen(sm) {
+            padding: 1.6rem;
+        }
+    }
+
+    &__image {
+        width: 16.5rem;
+        height: 16.5rem;
+        object-fit: contain;
+
+        @include abstracts.screen(xl) {
+            width: 14.5rem;
+            height: 14.5rem;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 16.5rem;
+            height: 16.5rem;
+        }
+
+        @include abstracts.screen(md) {
+            width: 14rem;
+            height: 14rem;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__left {
+        gap: 1.6rem;
+    }
+
+    &__right {
+        justify-content: space-between;
+        text-align: right;
+        margin-left: auto;
+
+        @include abstracts.screen(md) {
+            margin-top: 2rem;
+            justify-content: flex-start;
+            text-align: left;
+            margin-left: 0;
+            gap: 2rem;
+        }
+    }
+
+    &__header,
+    &__bottom {
+        justify-content: space-between;
+    }
+
+    &__header {
+        align-items: flex-start;
+    }
+
+    &__title {
+        max-width: 37.4rem;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(xl) {
+            font-size: 1.6rem;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+            line-height: 142.875%;
+        }
+    }
+
+    &__price {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        color: #9e9da8;
+
+        @include abstracts.screen(xl) {
+            font-size: 1.6rem;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__price--bold {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+
+        @include abstracts.screen(xl) {
+            font-size: 2rem;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 2.2rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__status {
+        color: #67b044;
+    }
+
+    &__edit {
+        gap: 2rem;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    &__wrap {
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border: 1px solid var(--checkout-boder-color);
+        border-radius: 1rem;
+
+        @include abstracts.screen(xl) {
+            padding: 0.5rem 1rem;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 1rem 2rem;
+        }
+
+        &-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(xl) {
+                font-size: 1.3rem;
+            }
+
+            @include abstracts.screen(lg) {
+                font-size: 1.5rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-icon {
+            margin-top: 0.2rem;
+            width: 1.6rem;
+            height: 1.6rem;
+
+            @include abstracts.screen(xl) {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+
+        // @include abstracts.screen(lg) {
+        //     &-bill {
+        //         display: flex;
+        //         margin-top: 3rem;
+        //     }
+        // }
+    }
+
+    &__select,
+    &__quantity-icon {
+        cursor: pointer;
+    }
+
+    &__select {
+        align-items: center;
+    }
+
+    &__cta {
+        gap: 3rem;
+        margin-top: auto;
+        min-height: 4.4rem;
+
+        @include abstracts.screen(xl) {
+            min-height: 4rem;
+        }
+
+        @include abstracts.screen(lg) {
+            min-height: 4.4rem;
+        }
+
+        @include abstracts.screen(sm) {
+            min-height: 3rem;
+        }
+    }
+
+    &__btn {
+        gap: 1rem;
+
+        color: #9e9da8;
+    }
+
+    &__bill {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        padding: 3rem;
+        border-radius: 2rem;
+
+        color: var(--checkout-text-color);
+        background: var(--checkout-background);
+
+        @include abstracts.screen(lg) {
+            margin-top: 3rem;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: 2rem;
+        }
+
+        &-row {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-label {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 150%;
+
+            &--bold {
+                font-weight: 500;
+            }
+        }
+
+        &-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        &-separate {
+            height: 0.1rem;
+            background: var(--checkout-boder-color);
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.6rem;
+            padding: 1.6rem 2.5rem;
+
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+
+            @include abstracts.screen(xl) {
+                padding: 1.2rem 2.2rem;
+
+                font-size: 1.6rem;
+            }
+
+            @include abstracts.screen(lg) {
+                padding: 1.6rem 2.5rem;
+
+                font-size: 2rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__gift {
+        align-items: flex-start;
+        gap: 2rem;
+        margin-top: 3rem;
+        padding: 3rem;
+        border-radius: 2rem;
+
+        color: var(--checkout-text-color);
+        background: var(--checkout-background);
+
+        @include abstracts.screen(xl) {
+            padding: 2rem;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 3rem;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: 2rem;
+        }
+
+        &-thumb {
+            padding: 1rem;
+            border-radius: 1.4rem;
+            background: var(--gift-image-background);
+
+            @include abstracts.screen(xl) {
+                padding: 0.5rem;
+            }
+
+            @include abstracts.screen(lg) {
+                padding: 1rem;
+            }
+
+            @include abstracts.screen(sm) {
+                padding: 0.8rem;
+            }
+        }
+
+        &-content {
+            gap: 1rem;
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(xl) {
+                font-size: 1.4rem;
+            }
+
+            @include abstracts.screen(lg) {
+                font-size: 1.8rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+
+        &-desc {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+
+            @include abstracts.screen(xl) {
+                font-size: 1.2rem;
+            }
+
+            @include abstracts.screen(lg) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.provisional {
+    padding-top: 3rem;
+
+    @include abstracts.screen(md) {
+        padding-top: 1rem;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 28.7rem;
+        padding-bottom: 3rem;
+        margin-left: auto;
+        border-bottom: 0.1rem solid var(--checkout-boder-color);
+
+        &-item {
+            justify-content: space-between;
+        }
+    }
+
+    &__price {
+        color: var(--checkout-text-color);
+    }
+
+    &__bottom {
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+
+    &__back {
+        gap: 2rem;
+    }
+
+    &__total {
+        order: 1;
+        gap: 14rem;
+    }
+}

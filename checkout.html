@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout | Grocerymart</title>
+
+        <!-- =============== Favicon ================= -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- =============== Font ================= -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- =============== CSS ================= -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- =============== Scripts ================= -->
+        <script src="./assets/scripts/main.js"></script>
+    </head>
+    <body>
+        <!-- =============== Header ================= -->
+        <header id="header" class="header"></header>
+        <script>
+            load('#header', './templates/header-logined.html');
+        </script>
+
+        <div class="container">
+            <!-- =============== Main ================= -->
+            <main>
+                <div class="checkout">
+                    <!-- Breadcrumbs -->
+                    <ul class="breadcrumbs checkout__breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link">Home</a>
+                            <img
+                                src="./assets/icons/arrow-right-detail.svg"
+                                alt="Arrow right"
+                                class="breadcrumbs__arrow"
+                            />
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                        </li>
+                    </ul>
+
+                    <div class="checkout__inner">
+                        <div class="row row-cols-2 row-cols-lg-1">
+                            <div class="col-8">
+                                <div class="checkout__list">
+                                    <!-- Item 1 -->
+                                    <div class="checkout__horizontal checkout__item">
+                                        <a href="./product-detail.html">
+                                            <img
+                                                src="./assets/images/products/item-1.png"
+                                                alt="Product"
+                                                class="checkout__image"
+                                            />
+                                        </a>
+                                        <div class="checkout__horizontal checkout__content">
+                                            <!-- Left -->
+                                            <div class="checkout__vertical checkout__left">
+                                                <div class="checkout__horizontal checkout__header">
+                                                    <h2 class="checkout__title">
+                                                        Coffee Beans - Espresso Arabica and Robusta Beans
+                                                    </h2>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__middle">
+                                                    <div class="checkout__price">$47.00</div>
+                                                    <div class="checkout__sparate"></div>
+                                                    <div class="checkout__status">In Stock</div>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__bottom">
+                                                    <div class="checkout__horizontal checkout__edit">
+                                                        <div
+                                                            class="checkout__horizontal checkout__wrap checkout__select"
+                                                        >
+                                                            <span class="checkout__wrap-text">LavAzza</span>
+                                                            <img
+                                                                class="icon--opacity checkout__wrap-icon"
+                                                                src="./assets/icons/arrow-down.svg"
+                                                                alt="Arrow down"
+                                                            />
+                                                        </div>
+
+                                                        <div class="checkout__horizontal checkout__wrap">
+                                                            <img
+                                                                src="./assets/icons/minus.svg"
+                                                                alt="Minus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                            <span class="checkout__wrap-text">1</span>
+                                                            <img
+                                                                src="./assets/icons/plus.svg"
+                                                                alt="Plus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Right -->
+                                            <div class="checkout__vertical checkout__right">
+                                                <strong class="checkout__price--bold checkout__right-price">
+                                                    $47.00
+                                                </strong>
+
+                                                <div class="checkout__horizontal checkout__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img src="./assets/icons/heart-opacity.svg" alt="Like" />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#dialog-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 2 -->
+                                    <div class="checkout__horizontal checkout__item">
+                                        <a href="./product-detail.html">
+                                            <img
+                                                src="./assets/images/products/item-2.png"
+                                                alt="Product"
+                                                class="checkout__image"
+                                            />
+                                        </a>
+                                        <div class="checkout__horizontal checkout__content">
+                                            <!-- Left -->
+                                            <div class="checkout__vertical checkout__left">
+                                                <div class="checkout__horizontal checkout__header">
+                                                    <h2 class="checkout__title">
+                                                        Lavazza Coffee Blends - Try the Italian Espresso
+                                                    </h2>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__middle">
+                                                    <div class="checkout__price">$53.00</div>
+                                                    <div class="checkout__sparate"></div>
+                                                    <div class="checkout__status">In Stock</div>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__bottom">
+                                                    <div class="checkout__horizontal checkout__edit">
+                                                        <div
+                                                            class="checkout__horizontal checkout__wrap checkout__select"
+                                                        >
+                                                            <span class="checkout__wrap-text">LavAzza</span>
+                                                            <img
+                                                                class="icon--opacity checkout__wrap-icon"
+                                                                src="./assets/icons/arrow-down.svg"
+                                                                alt="Arrow down"
+                                                            />
+                                                        </div>
+
+                                                        <div class="checkout__horizontal checkout__wrap">
+                                                            <img
+                                                                src="./assets/icons/minus.svg"
+                                                                alt="Minus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                            <span class="checkout__wrap-text">2</span>
+                                                            <img
+                                                                src="./assets/icons/plus.svg"
+                                                                alt="Plus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Right -->
+                                            <div class="checkout__vertical checkout__right">
+                                                <strong class="checkout__price--bold checkout__right-price">
+                                                    $106.00
+                                                </strong>
+
+                                                <div class="checkout__horizontal checkout__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img src="./assets/icons/heart-opacity.svg" alt="Like" />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#dialog-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 3 -->
+                                    <div class="checkout__horizontal checkout__item">
+                                        <a href="./product-detail.html">
+                                            <img
+                                                src="./assets/images/products/item-3.png"
+                                                alt="Product"
+                                                class="checkout__image"
+                                            />
+                                        </a>
+                                        <div class="checkout__horizontal checkout__content">
+                                            <!-- Left -->
+                                            <div class="checkout__vertical checkout__left">
+                                                <div class="checkout__horizontal checkout__header">
+                                                    <h2 class="checkout__title">
+                                                        Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                                    </h2>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__middle">
+                                                    <div class="checkout__price">$38.65</div>
+                                                    <div class="checkout__sparate"></div>
+                                                    <div class="checkout__status">In Stock</div>
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__bottom">
+                                                    <div class="checkout__horizontal checkout__edit">
+                                                        <div
+                                                            class="checkout__horizontal checkout__wrap checkout__select"
+                                                        >
+                                                            <span class="checkout__wrap-text">LavAzza</span>
+                                                            <img
+                                                                class="icon--opacity checkout__wrap-icon"
+                                                                src="./assets/icons/arrow-down.svg"
+                                                                alt="Arrow down"
+                                                            />
+                                                        </div>
+
+                                                        <div class="checkout__horizontal checkout__wrap">
+                                                            <img
+                                                                src="./assets/icons/minus.svg"
+                                                                alt="Minus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                            <span class="checkout__wrap-text">1</span>
+                                                            <img
+                                                                src="./assets/icons/plus.svg"
+                                                                alt="Plus"
+                                                                class="icon--opacity checkout__quantity-icon"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Right -->
+                                            <div class="checkout__vertical checkout__right">
+                                                <strong class="checkout__price--bold checkout__right-price">
+                                                    $38.00
+                                                </strong>
+
+                                                <div class="checkout__horizontal checkout__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img src="./assets/icons/heart-opacity.svg" alt="Like" />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#dialog-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="provisional">
+                                        <div class="provisional__right d-md-none">
+                                            <div class="checkout__horizontal provisional__right-item">
+                                                <span class="checkout__title">Subtotal:</span>
+                                                <div class="checkout__price provisional__price">$191.65</div>
+                                            </div>
+                                            <div class="checkout__horizontal provisional__right-item">
+                                                <span class="checkout__title">Shipping:</span>
+                                                <div class="checkout__price provisional__price">$10:00</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="checkout__horizontal provisional__bottom">
+                                            <a
+                                                href="./index-logined.html"
+                                                class="icon--opacity checkout__horizontal provisional__back"
+                                            >
+                                                <img src="./assets/icons/arrow-left.svg" alt="Arrow left" />
+                                                <span class="checkout__title">Continue Shopping</span>
+                                            </a>
+                                            <div class="checkout__horizontal provisional__total d-md-none">
+                                                <span class="checkout__price--bold">Total:</span>
+                                                <div class="checkout__price--bold">$201.65</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="checkout__wrap-bill">
+                                    <div class="checkout__bill">
+                                        <div class="checkout__horizontal checkout__bill-row">
+                                            <span class="checkout__bill-label">
+                                                <strong class="checkout__bill-label--bold">Subtotal</strong>
+                                                (items)
+                                            </span>
+                                            <div class="checkout__bill-number">3</div>
+                                        </div>
+                                        <div class="checkout__horizontal checkout__bill-row">
+                                            <span class="checkout__bill-label">
+                                                <strong class="checkout__bill-label--bold">Price</strong>
+                                                (Total)
+                                            </span>
+                                            <div class="checkout__bill-number">$191.65</div>
+                                        </div>
+                                        <div class="checkout__horizontal checkout__bill-row">
+                                            <strong class="checkout__bill-label--bold">Shipping</strong>
+                                            <div class="checkout__bill-number">$10.00</div>
+                                        </div>
+                                        <div class="checkout__bill-separate"></div>
+                                        <div class="checkout__horizontal checkout__bill-row">
+                                            <strong class="checkout__bill-label--bold">Estimated Total</strong>
+                                            <div class="checkout__bill-number">$201.65</div>
+                                        </div>
+                                        <a href="#!" class="btn btn--rounded btn--primary checkout__bill-btn">
+                                            Continue to checkout
+                                        </a>
+                                    </div>
+
+                                    <div class="checkout__horizontal checkout__gift">
+                                        <div class="checkout__gift-thumb">
+                                            <img
+                                                src="./assets/icons/gift.svg"
+                                                alt="Gift"
+                                                class="checkout__gift-image"
+                                            />
+                                        </div>
+                                        <div class="checkout__vertical checkout__gift-content">
+                                            <div class="checkout__gift-title">Send this order as a gift.</div>
+                                            <div class="checkout__gift-desc">
+                                                Available items will be shipped to your gift recipient.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- =============== Footer ================= -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load('#footer', './templates/footer.html');
+        </script>
+
+        <!-- =============== Dialog / Modal ================= -->
+        <div id="dialog-delete" class="dialog hide">
+            <div class="dialog__content">
+                <div class="dialog__title">Are you sure you want to remove the product from your shopping cart?</div>
+                <div class="dialog__cta">
+                    <button class="btn btn--text dialog__btn js-toggle" toggle-target="#dialog-delete">Cancel</button>
+                    <button class="btn btn--primary dialog__btn js-toggle" toggle-target="#dialog-delete">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <div class="dialog__overlay js-toggle" toggle-target="#dialog-delete"></div>
+        </div>
+    </body>
+</html>

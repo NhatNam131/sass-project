@@ -1,5 +1,11 @@
 @use '../abstracts';
 
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .filter__btn {
     cursor: pointer;
     display: flex;
@@ -27,9 +33,8 @@
 // Button
 .like-btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
+
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -50,17 +55,20 @@
 }
 
 .btn {
+    @extend %flex-center;
+
     padding: 1rem 2rem;
     border-radius: 0.6rem;
     color: #1a162e;
     background: #f8f8fb;
     font-size: 1.8rem;
     font-weight: 500;
+    white-space: nowrap;
     user-select: none;
 
     &--text {
+        color: var(--text-color);
         font-weight: 400;
-        color: #9e9da8;
         background: transparent;
     }
 

@@ -33,6 +33,10 @@ a {
     filter: var(--icon-color);
 }
 
+.icon--opacity {
+    filter: var(--icon-opacity-color);
+}
+
 a,
 button,
 input,
