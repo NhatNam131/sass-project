@@ -146,7 +146,10 @@
     --checkout-text-color: #1a162e;
     --checkout-boder-color: #d2d1d6;
     --gift-image-background: rgba(118, 68, 225, 0.1);
-
+    --shipping-check-color: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(7486%) hue-rotate(194deg)
+        brightness(107%) contrast(96%);
+    --shipping-checked-color: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(7486%) hue-rotate(194deg)
+        brightness(107%) contrast(96%);
     //============== Dialog =================
     --dialog-background: #fff;
     --box-shadow-dialog-color: rgba(200, 200, 200, 0.4);

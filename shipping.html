@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout | Grocerymart</title>
+        <title>Shipping | Grocerymart</title>
 
         <!-- =============== Favicon ================= -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -45,16 +45,137 @@
                             />
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="#!" class="breadcrumbs__link">Checkout</a>
+                            <img
+                                src="./assets/icons/arrow-right-detail.svg"
+                                alt="Arrow right"
+                                class="breadcrumbs__arrow"
+                            />
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                         </li>
                     </ul>
 
                     <div class="checkout__inner">
                         <div class="row row-cols-2 row-cols-lg-1">
-                            <div class="col-8">
-                                <div class="checkout__list">
+                            <div class="col-9 col-xl-8">
+                                <section class="checkout__list">
+                                    <!-- Shipping -->
+                                    <section class="shipping">
+                                        <h1 class="shipping__heading">
+                                            1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                        </h1>
+                                        <div class="shipping__separate"></div>
+                                        <div class="shipping__header">
+                                            <div class="shipping__header-left">
+                                                <h2 class="shipping__header-title">Shipping address</h2>
+                                                <p class="shipping__header-desc">Where should we deliver your order?</p>
+                                            </div>
+
+                                            <div class="shipping__header-right">
+                                                <button class="btn btn--primary btn--rounded shipping__header-button">
+                                                    <img src="./assets/icons/plus.svg" alt="Plus" />
+                                                    Add a new address
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <form action="" class="shipping__form">
+                                            <!-- Item 1 -->
+                                            <div class="shipping__form-item">
+                                                <input
+                                                    type="checkbox"
+                                                    class="shipping__form-checkbox"
+                                                    id="item-1"
+                                                    hidden
+                                                />
+                                                <!-- Left -->
+                                                <div class="shipping__form-left">
+                                                    <label for="item-1" class="shipping__form-label">
+                                                        Imran Khan
+                                                    </label>
+                                                    <div class="shipping__form-desc">
+                                                        Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                                    </div>
+                                                    <div class="shipping__form-bottom">
+                                                        <div class="shipping__form-service">
+                                                            <div class="shipping__form-dot"></div>
+                                                            Shipping
+                                                        </div>
+
+                                                        <div class="shipping__form-service">
+                                                            <div class="shipping__form-dot"></div>
+                                                            Delivery from store
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Right -->
+                                                <div class="shipping__form-right">
+                                                    <div class="shipping__form-cta">
+                                                        <button class="shipping__form-button">
+                                                            <img
+                                                                src="./assets/icons/edit.svg"
+                                                                alt="Edit"
+                                                                class="icon--opacity"
+                                                            />
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Item 2 -->
+                                            <div class="shipping__form-item">
+                                                <input
+                                                    type="checkbox"
+                                                    class="shipping__form-checkbox"
+                                                    id="item-2"
+                                                    hidden
+                                                />
+                                                <!-- Left -->
+                                                <div class="shipping__form-left">
+                                                    <label for="item-2" class="shipping__form-label">
+                                                        Imran Khan
+                                                    </label>
+                                                    <div class="shipping__form-desc">
+                                                        Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet,
+                                                        Sylhet, Bangladesh
+                                                    </div>
+                                                    <div class="shipping__form-bottom">
+                                                        <div class="shipping__form-service">
+                                                            <div class="shipping__form-dot"></div>
+                                                            Shipping
+                                                        </div>
+
+                                                        <div class="shipping__form-service">
+                                                            <div class="shipping__form-dot"></div>
+                                                            Delivery from store
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Right -->
+                                                <div class="shipping__form-right">
+                                                    <div class="shipping__form-cta">
+                                                        <button class="shipping__form-button">
+                                                            <img
+                                                                src="./assets/icons/edit.svg"
+                                                                alt="Edit"
+                                                                class="icon--opacity"
+                                                            />
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+
+                                    <h2 class="shipping__header-title shipping__title">Items details</h2>
+
                                     <!-- Item 1 -->
-                                    <article class="checkout__horizontal checkout__item">
+                                    <article class="checkout__horizontal checkout__item shipping__product">
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/images/products/item-1.png"
@@ -115,7 +236,18 @@
 
                                                 <div class="checkout__horizontal checkout__cta">
                                                     <button class="checkout__horizontal checkout__btn">
-                                                        <img src="./assets/icons/heart-opacity.svg" alt="Like" />
+                                                        <div class="checkout__icon-wrap">
+                                                            <img
+                                                                src="./assets/icons/heart-opacity.svg"
+                                                                alt="Like"
+                                                                class="checkout__like"
+                                                            />
+                                                            <img
+                                                                src="./assets/icons/heart-red.svg"
+                                                                alt="Like"
+                                                                class="checkout__liked"
+                                                            />
+                                                        </div>
                                                         Save
                                                     </button>
 
@@ -132,7 +264,7 @@
                                     </article>
 
                                     <!-- Item 2 -->
-                                    <article class="checkout__horizontal checkout__item">
+                                    <article class="checkout__horizontal checkout__item shipping__product">
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/images/products/item-2.png"
@@ -210,7 +342,7 @@
                                     </article>
 
                                     <!-- Item 3 -->
-                                    <article class="checkout__horizontal checkout__item">
+                                    <article class="checkout__horizontal checkout__item shipping__product">
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/images/products/item-3.png"
@@ -287,18 +419,7 @@
                                         </div>
                                     </article>
 
-                                    <div class="provisional">
-                                        <div class="provisional__right d-md-none">
-                                            <div class="checkout__horizontal provisional__right-item">
-                                                <span class="checkout__title">Subtotal:</span>
-                                                <div class="checkout__price provisional__price">$191.65</div>
-                                            </div>
-                                            <div class="checkout__horizontal provisional__right-item">
-                                                <span class="checkout__title">Shipping:</span>
-                                                <div class="checkout__price provisional__price">$10:00</div>
-                                            </div>
-                                        </div>
-
+                                    <div class="provisional shipping__provisional">
                                         <div class="checkout__horizontal provisional__bottom">
                                             <a
                                                 href="./index-logined.html"
@@ -307,16 +428,17 @@
                                                 <img src="./assets/icons/arrow-left.svg" alt="Arrow left" />
                                                 <span class="checkout__title">Continue Shopping</span>
                                             </a>
-                                            <div class="checkout__horizontal provisional__total d-md-none">
-                                                <span class="checkout__price--bold">Total:</span>
-                                                <div class="checkout__price--bold">$201.65</div>
-                                            </div>
+                                            <button
+                                                class="btn btn--primary btn--rounded shipping__provisional-btn d-md-none"
+                                            >
+                                                Continue
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
+                                </section>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-3 col-xl-4">
                                 <div class="checkout__wrap-bill">
                                     <div class="checkout__bill">
                                         <div class="checkout__horizontal checkout__bill-row">
@@ -343,27 +465,11 @@
                                             <div class="checkout__bill-number">$201.65</div>
                                         </div>
                                         <a
-                                            href="./shipping.html"
-                                            class="btn btn--rounded btn--primary checkout__bill-btn"
+                                            href="#!"
+                                            class="btn btn--rounded btn--primary checkout__bill-btn shipping__bill-btn d-none d-md-flex"
                                         >
                                             Continue to checkout
                                         </a>
-                                    </div>
-
-                                    <div class="checkout__horizontal checkout__gift">
-                                        <div class="checkout__gift-thumb">
-                                            <img
-                                                src="./assets/icons/gift.svg"
-                                                alt="Gift"
-                                                class="checkout__gift-image"
-                                            />
-                                        </div>
-                                        <div class="checkout__vertical checkout__gift-content">
-                                            <div class="checkout__gift-title">Send this order as a gift.</div>
-                                            <div class="checkout__gift-desc">
-                                                Available items will be shipped to your gift recipient.
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

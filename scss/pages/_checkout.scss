@@ -291,10 +291,38 @@
         }
     }
 
+    &__icon {
+        &-wrap {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__liked {
+        margin-top: 0.6rem;
+    }
+
+    &__liked {
+        display: none;
+    }
+
     &__btn {
+        align-items: center;
         gap: 1rem;
 
         color: #9e9da8;
+    }
+
+    &__btn.checkout__btn-liked .checkout__like {
+        display: none;
+    }
+
+    &__btn.checkout__btn-liked .checkout__liked {
+        display: block;
+    }
+
+    &__btn.checkout__btn-liked {
+        gap: 0;
     }
 
     &__bill {
@@ -486,5 +514,238 @@
     &__total {
         order: 1;
         gap: 14rem;
+    }
+}
+
+.shipping {
+    padding-top: 2rem;
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
+    }
+
+    &__separate {
+        margin: 3rem 0;
+        height: 0.1rem;
+        background: var(--checkout-boder-color);
+
+        @include abstracts.screen(sm) {
+            margin-top: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.6rem;
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+
+        &-desc {
+            margin-top: 0.4rem;
+            font-size: 1.5rem;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                max-width: 25rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        &-item {
+            display: flex;
+            align-items: flex-start;
+
+            @include abstracts.screen(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &-left {
+            flex: 1;
+            margin-left: 1.6rem;
+            padding-left: 3.73rem;
+        }
+
+        &-right {
+            align-self: flex-end;
+            text-align: right;
+
+            @include abstracts.screen(sm) {
+                margin-top: 1.6rem;
+                align-self: flex-start;
+                text-align: left;
+            }
+        }
+
+        &-label {
+            position: relative;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -52px;
+                width: 1.85rem;
+                height: 1.85rem;
+                border: 0.1rem solid var(--checkout-text-color);
+                border-radius: 0.5rem;
+            }
+
+            &::after {
+                content: url(../../assets/icons/check.svg);
+                position: absolute;
+                top: -1px;
+                left: -47px;
+                width: 1rem;
+                filter: var(--shipping-check-color);
+                height: 1rem;
+
+                @include abstracts.screen(sm) {
+                    top: 0.2rem;
+                    left: -47px;
+                }
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+
+        &-item:has(input[type='checkbox']:checked) .shipping__form-label::before {
+            border-color: #67b044;
+            background: #67b044;
+        }
+
+        &-item:has(input[type='checkbox']:checked) .shipping__form-label::after {
+            filter: var(--shipping-checked-color);
+        }
+
+        &-desc {
+            font-size: 1.5rem;
+            line-height: 146.667%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        &-service {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+
+        &-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: var(--checkout-text-color);
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            font-size: 1.8rem;
+            line-height: 144.444%;
+        }
+    }
+
+    &__title {
+        margin-top: 3rem;
+    }
+
+    &__provisional {
+        padding-top: 0;
+
+        &-btn {
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__product:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &__bill {
+        &-btn {
+            margin-top: 1.2rem;
+            font-size: 1.6rem;
+        }
     }
 }
