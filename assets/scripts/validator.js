@@ -164,3 +164,14 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
         },
     };
 };
+
+// ================ Phone ==================
+Validator.isPhone = function (selector) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var regex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+            return regex.test(value) ? undefined : 'Please enter your phone';
+        },
+    };
+};

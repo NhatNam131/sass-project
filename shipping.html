@@ -20,8 +20,8 @@
         <!-- =============== CSS ================= -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
-        <!-- =============== Scripts ================= -->
-        <script src="./assets/scripts/main.js"></script>
+        <!-- =============== Script ================= -->
+        <script src="./assets/scripts/toggle.js"></script>
     </head>
     <body>
         <!-- =============== Header ================= -->
@@ -34,6 +34,14 @@
             <!-- =============== Main ================= -->
             <main>
                 <div class="checkout">
+                    <!-- Search -->
+                    <div class="search detail__search checkout__search d-none d-lg-flex">
+                        <input placeholder="Search for item" class="search__input" />
+                        <button class="icon search__btn">
+                            <img src="./assets/icons/search.svg" alt="Search button" />
+                        </button>
+                    </div>
+
                     <!-- Breadcrumbs -->
                     <ul class="breadcrumbs checkout__breadcrumbs">
                         <li class="breadcrumbs__item">
@@ -74,7 +82,10 @@
                                             </div>
 
                                             <div class="shipping__header-right">
-                                                <button class="btn btn--primary btn--rounded shipping__header-button">
+                                                <button
+                                                    class="btn btn--primary btn--rounded shipping__header-button js-toggle"
+                                                    toggle-target="#modal-add-address"
+                                                >
                                                     <img src="./assets/icons/plus.svg" alt="Plus" />
                                                     Add a new address
                                                 </button>
@@ -85,9 +96,10 @@
                                             <!-- Item 1 -->
                                             <div class="shipping__form-item">
                                                 <input
-                                                    type="checkbox"
+                                                    type="radio"
                                                     class="shipping__form-checkbox"
                                                     id="item-1"
+                                                    name="shipping-address"
                                                     hidden
                                                 />
                                                 <!-- Left -->
@@ -113,7 +125,10 @@
                                                 <!-- Right -->
                                                 <div class="shipping__form-right">
                                                     <div class="shipping__form-cta">
-                                                        <button class="shipping__form-button">
+                                                        <button
+                                                            class="shipping__form-button js-toggle"
+                                                            toggle-target="#modal-add-address"
+                                                        >
                                                             <img
                                                                 src="./assets/icons/edit.svg"
                                                                 alt="Edit"
@@ -128,9 +143,10 @@
                                             <!-- Item 2 -->
                                             <div class="shipping__form-item">
                                                 <input
-                                                    type="checkbox"
+                                                    type="radio"
                                                     class="shipping__form-checkbox"
                                                     id="item-2"
+                                                    name="shipping-address"
                                                     hidden
                                                 />
                                                 <!-- Left -->
@@ -158,7 +174,10 @@
                                                 <!-- Right -->
                                                 <div class="shipping__form-right">
                                                     <div class="shipping__form-cta">
-                                                        <button class="shipping__form-button">
+                                                        <button
+                                                            class="shipping__form-button js-toggle"
+                                                            toggle-target="#modal-add-address"
+                                                        >
                                                             <img
                                                                 src="./assets/icons/edit.svg"
                                                                 alt="Edit"
@@ -253,7 +272,7 @@
 
                                                     <button
                                                         class="checkout__horizontal checkout__btn js-toggle"
-                                                        toggle-target="#dialog-delete"
+                                                        toggle-target="#modal-delete"
                                                     >
                                                         <img src="./assets/icons/delete.svg" alt="Delete" />
                                                         Delete
@@ -331,7 +350,7 @@
 
                                                     <button
                                                         class="checkout__horizontal checkout__btn js-toggle"
-                                                        toggle-target="#dialog-delete"
+                                                        toggle-target="#modal-delete"
                                                     >
                                                         <img src="./assets/icons/delete.svg" alt="Delete" />
                                                         Delete
@@ -409,7 +428,7 @@
 
                                                     <button
                                                         class="checkout__horizontal checkout__btn js-toggle"
-                                                        toggle-target="#dialog-delete"
+                                                        toggle-target="#modal-delete"
                                                     >
                                                         <img src="./assets/icons/delete.svg" alt="Delete" />
                                                         Delete
@@ -428,11 +447,12 @@
                                                 <img src="./assets/icons/arrow-left.svg" alt="Arrow left" />
                                                 <span class="checkout__title">Continue Shopping</span>
                                             </a>
-                                            <button
+                                            <a
+                                                href="./payment.html"
                                                 class="btn btn--primary btn--rounded shipping__provisional-btn d-md-none"
                                             >
                                                 Continue
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </section>
@@ -465,7 +485,7 @@
                                             <div class="checkout__bill-number">$201.65</div>
                                         </div>
                                         <a
-                                            href="#!"
+                                            href="./payment.html"
                                             class="btn btn--rounded btn--primary checkout__bill-btn shipping__bill-btn d-none d-md-flex"
                                         >
                                             Continue to checkout
@@ -484,19 +504,149 @@
             load('#footer', './templates/footer.html');
         </script>
 
-        <!-- =============== Dialog / Modal ================= -->
-        <div id="dialog-delete" class="dialog hide">
-            <div class="dialog__content">
-                <div class="dialog__title">Are you sure you want to remove the product from your shopping cart?</div>
-                <div class="dialog__cta">
-                    <button class="btn btn--text dialog__btn js-toggle" toggle-target="#dialog-delete">Cancel</button>
-                    <button class="btn btn--primary dialog__btn js-toggle" toggle-target="#dialog-delete">
-                        Confirm
-                    </button>
+        <!-- =============== Modal ================= -->
+        <div id="modal-delete" class="modal modal--small hide">
+            <div class="modal__content">
+                <div class="modal__title">Are you sure you want to remove the product from your shopping cart?</div>
+                <div class="modal__cta">
+                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#modal-delete">Cancel</button>
+                    <button class="btn btn--primary modal__btn js-toggle" toggle-target="#modal-delete">Confirm</button>
                 </div>
             </div>
 
-            <div class="dialog__overlay js-toggle" toggle-target="#dialog-delete"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#modal-delete"></div>
         </div>
+
+        <!-- ========== Modal add address =========== -->
+        <div id="modal-add-address" class="modal hide">
+            <div class="modal__content">
+                <p class="modal__desc">Add your address so we can deliver your order faster</p>
+                <div class="modal__form-content">
+                    <form action="" class="form__address" id="form-add-address">
+                        <div class="form__group--horizontal form__address-group">
+                            <div class="form__group">
+                                <label for="name" class="form__label--small">Name</label>
+                                <div class="form__wrap-input form__wrap-input--small">
+                                    <input
+                                        type="text"
+                                        placeholder="Your name"
+                                        class="form__input form__input--small"
+                                        id="name"
+                                    />
+                                </div>
+                                <span class="form__message--error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="phone" class="form__label--small">Phone</label>
+                                <div class="form__wrap-input form__wrap-input--small">
+                                    <input
+                                        type="tel"
+                                        placeholder="Phone"
+                                        class="form__input form__input--small"
+                                        id="phone"
+                                    />
+                                </div>
+                                <span class="form__message--error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="address" class="form__label--small">Address</label>
+                            <div class="form__wrap-input">
+                                <textarea
+                                    placeholder="Address (Area and street)"
+                                    class="form__area"
+                                    id="address"
+                                ></textarea>
+                            </div>
+                            <span class="form__message--error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="city" class="form__label--small">City/District/Town</label>
+                            <div class="form__wrap-input form__wrap-input--small shipping-select__city">
+                                <input
+                                    type="text"
+                                    placeholder="City/District/Town"
+                                    class="form__input form__input--small js-toggle"
+                                    toggle-target="#select-city"
+                                    id="city"
+                                    readonly
+                                />
+                                <div id="select-city" class="shipping-select__wrap hide">
+                                    <div class="shipping-select__header d-none d-sm-flex">
+                                        <img
+                                            src="./assets/icons/arrow-left.svg"
+                                            alt="Back"
+                                            class="icon--opacity js-toggle"
+                                            toggle-target="#select-city"
+                                        />
+                                        <h2 class="shipping-select__header-title">City/District/Town</h2>
+                                    </div>
+                                    <div class="filter__form-search shipping-select__search">
+                                        <input type="text" placeholder="Search" class="filter__form-search--input" />
+                                        <img
+                                            src="./assets/icons/search.svg"
+                                            alt="Search"
+                                            class="icon--opacity filter__form-search--icon shipping-select__search--icon"
+                                        />
+                                    </div>
+
+                                    <ul class="form-option__list shipping-option__list">
+                                        <li class="form-option__item shipping-option__item">Hà Nội</li>
+                                        <li class="form-option__item shipping-option__item form-option__item--current">
+                                            Thanh Hoá
+                                        </li>
+                                        <li class="form-option__item shipping-option__item">Đà Nẵng</li>
+                                        <li class="form-option__item shipping-option__item">TP. Hồ Chí Minh</li>
+                                        <li class="form-option__item shipping-option__item">Cần Thơ</li>
+                                        <li class="form-option__item shipping-option__item">Hà Nội</li>
+                                        <li class="form-option__item shipping-option__item">Thanh Hoá</li>
+                                        <li class="form-option__item shipping-option__item">Đà Nẵng</li>
+                                        <li class="form-option__item shipping-option__item">TP. Hồ Chí Minh</li>
+                                        <li class="form-option__item shipping-option__item">Cần Thơ</li>
+                                        <li class="form-option__item shipping-option__item">Hà Nội</li>
+                                        <li class="form-option__item shipping-option__item">Thanh Hoá</li>
+                                        <li class="form-option__item shipping-option__item">Đà Nẵng</li>
+                                        <li class="form-option__item shipping-option__item">TP. Hồ Chí Minh</li>
+                                        <li class="form-option__item shipping-option__item">Cần Thơ</li>
+                                        <li class="form-option__item shipping-option__item">Hà Nội</li>
+                                        <li class="form-option__item shipping-option__item">Thanh Hoá</li>
+                                        <li class="form-option__item shipping-option__item">Đà Nẵng</li>
+                                        <li class="form-option__item shipping-option__item">TP. Hồ Chí Minh</li>
+                                        <li class="form-option__item shipping-option__item">Cần Thơ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="form__message--error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__checkbox">
+                                <input type="checkbox" id="checkbox" class="form__checkbox--input" hidden />
+                                <label for="checkbox" class="form__checkbox--label">Set as default address</label>
+                            </div>
+                        </div>
+
+                        <div class="form__group--horizontal form__address-right">
+                            <button
+                                class="btn btn--text btn--outline modal__btn modal__btn-cancel js-toggle"
+                                toggle-target="#modal-add-address"
+                            >
+                                Cancel
+                            </button>
+                            <button class="btn btn--primary modal__btn modal__btn-create">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal__overlay"></div>
+        </div>
+
+        <!-- =============== Script ================= -->
+        <script src="./assets/scripts/validator.js"></script>
+        <script src="./assets/scripts/main.js"></script>
     </body>
 </html>

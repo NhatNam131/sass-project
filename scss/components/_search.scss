@@ -14,6 +14,10 @@
         font-size: 1.4rem;
         line-height: 142.857%;
 
+        @supports (-webkit-touch-callout: none) {
+            font-size: 1.6rem;
+        }
+
         &::placeholder {
             font-weight: 400;
 

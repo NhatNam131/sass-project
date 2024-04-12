@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Favourite | Grocerymart</title>
+
+        <!-- =============== Favicon ================= -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- =============== Font ================= -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- =============== CSS ================= -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- =============== Scripts ================= -->
+        <script src="./assets/scripts/toggle.js"></script>
+    </head>
+    <body>
+        <!-- =============== Header ================= -->
+        <header id="header" class="header"></header>
+        <script>
+            load('#header', './templates/header-logined.html');
+        </script>
+
+        <div class="container">
+            <!-- =============== Main ================= -->
+            <main>
+                <div class="checkout">
+                    <!-- Search -->
+                    <div class="search detail__search checkout__search d-none d-lg-flex">
+                        <input placeholder="Search for item" class="search__input" />
+                        <button class="icon search__btn">
+                            <img src="./assets/icons/search.svg" alt="Search button" />
+                        </button>
+                    </div>
+
+                    <!-- Breadcrumbs -->
+                    <ul class="breadcrumbs checkout__breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link">Home</a>
+                            <img
+                                src="./assets/icons/arrow-right-detail.svg"
+                                alt="Arrow right"
+                                class="breadcrumbs__arrow"
+                            />
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Favourite</a>
+                        </li>
+                    </ul>
+
+                    <div class="checkout__inner">
+                        <div class="checkout__list">
+                            <h1 class="favourite__heading">Favourite List</h1>
+                            <span class="favourite__count">3 items</span>
+
+                            <label class="favourite__label">
+                                <input type="checkbox" class="favourite__checkbox" hidden />
+                                All Choose
+                            </label>
+
+                            <!-- Item 1 -->
+                            <article class="checkout__horizontal checkout__item">
+                                <label for="" class="favourite__label favourite__item-label">
+                                    <input type="checkbox" class="favourite__item-checkbox" hidden />
+                                </label>
+                                <a href="./product-detail.html">
+                                    <img
+                                        src="./assets/images/products/item-1.png"
+                                        alt="Product"
+                                        class="checkout__image favourite__image"
+                                    />
+                                </a>
+                                <div class="checkout__horizontal checkout__content favourite__content">
+                                    <!-- Left -->
+                                    <div class="checkout__vertical checkout__left">
+                                        <div class="checkout__horizontal checkout__header">
+                                            <h2 class="checkout__title favourite__title">
+                                                Coffee Beans - Espresso Arabica and Robusta Beans
+                                            </h2>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__middle">
+                                            <div class="checkout__price">$47.00</div>
+                                            <div class="checkout__sparate"></div>
+                                            <div class="checkout__status">In Stock</div>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__bottom">
+                                            <div class="checkout__horizontal checkout__edit favourite__edit">
+                                                <div
+                                                    class="checkout__horizontal checkout__wrap checkout__select favourite__wrap"
+                                                >
+                                                    <span class="checkout__wrap-text">LavAzza</span>
+                                                    <img
+                                                        class="icon--opacity checkout__wrap-icon"
+                                                        src="./assets/icons/arrow-down.svg"
+                                                        alt="Arrow down"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__wrap favourite__wrap">
+                                                    <img
+                                                        src="./assets/icons/minus.svg"
+                                                        alt="Minus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                    <span class="checkout__wrap-text">1</span>
+                                                    <img
+                                                        src="./assets/icons/plus.svg"
+                                                        alt="Plus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__cta favourite__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img
+                                                            src="./assets/icons/heart-red.svg"
+                                                            alt="Like"
+                                                            class="favourite__liked"
+                                                        />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#modal-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right -->
+                                    <div class="checkout__vertical checkout__right favourite__right">
+                                        <strong
+                                            class="checkout__price--bold checkout__right-price favourite__right-price"
+                                        >
+                                            $47.00
+                                        </strong>
+                                        <button
+                                            href="./checkout.html"
+                                            class="btn btn--primary btn--rounded favourite__btn"
+                                        >
+                                            Check Out
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Item 2 -->
+                            <article class="checkout__horizontal checkout__item">
+                                <label for="" class="favourite__label favourite__item-label">
+                                    <input type="checkbox" class="favourite__item-checkbox" hidden />
+                                </label>
+                                <a href="./product-detail.html">
+                                    <img
+                                        src="./assets/images/products/item-2.png"
+                                        alt="Product"
+                                        class="checkout__image favourite__image"
+                                    />
+                                </a>
+                                <div class="checkout__horizontal checkout__content favourite__content">
+                                    <!-- Left -->
+                                    <div class="checkout__vertical checkout__left">
+                                        <div class="checkout__horizontal checkout__header">
+                                            <h2 class="checkout__title favourite__title">
+                                                Lavazza Coffee Blends - Try the Italian Espresso
+                                            </h2>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__middle">
+                                            <div class="checkout__price">$53.00</div>
+                                            <div class="checkout__sparate"></div>
+                                            <div class="checkout__status">In Stock</div>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__bottom favourite__bottom">
+                                            <div class="checkout__horizontal checkout__edit favourite__edit">
+                                                <div
+                                                    class="checkout__horizontal checkout__wrap checkout__select favourite__wrap"
+                                                >
+                                                    <span class="checkout__wrap-text">LavAzza</span>
+                                                    <img
+                                                        class="icon--opacity checkout__wrap-icon"
+                                                        src="./assets/icons/arrow-down.svg"
+                                                        alt="Arrow down"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__wrap favourite__wrap">
+                                                    <img
+                                                        src="./assets/icons/minus.svg"
+                                                        alt="Minus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                    <span class="checkout__wrap-text">2</span>
+                                                    <img
+                                                        src="./assets/icons/plus.svg"
+                                                        alt="Plus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__cta favourite__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img
+                                                            src="./assets/icons/heart-red.svg"
+                                                            alt="Like"
+                                                            class="favourite__liked"
+                                                        />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#modal-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right -->
+                                    <div class="checkout__vertical checkout__right favourite__right">
+                                        <strong
+                                            class="checkout__price--bold checkout__right-price favourite__right-price"
+                                        >
+                                            $106.00
+                                        </strong>
+                                        <button
+                                            href="./checkout.html"
+                                            class="btn btn--primary btn--rounded favourite__btn"
+                                        >
+                                            Check Out
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Item 3 -->
+                            <article class="checkout__horizontal checkout__item">
+                                <label for="" class="favourite__label favourite__item-label">
+                                    <input type="checkbox" class="favourite__item-checkbox" hidden />
+                                </label>
+                                <a href="./product-detail.html">
+                                    <img
+                                        src="./assets/images/products/item-3.png"
+                                        alt="Product"
+                                        class="checkout__image favourite__image"
+                                    />
+                                </a>
+                                <div class="checkout__horizontal checkout__content favourite__content">
+                                    <!-- Left -->
+                                    <div class="checkout__vertical checkout__left">
+                                        <div class="checkout__horizontal checkout__header">
+                                            <h2 class="checkout__title favourite__title">
+                                                Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                            </h2>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__middle">
+                                            <div class="checkout__price">$38.65</div>
+                                            <div class="checkout__sparate"></div>
+                                            <div class="checkout__status">In Stock</div>
+                                        </div>
+
+                                        <div class="checkout__horizontal checkout__bottom favourite__bottom">
+                                            <div class="checkout__horizontal checkout__edit favourite__edit">
+                                                <div
+                                                    class="checkout__horizontal checkout__wrap checkout__select favourite__wrap"
+                                                >
+                                                    <span class="checkout__wrap-text">LavAzza</span>
+                                                    <img
+                                                        class="icon--opacity checkout__wrap-icon"
+                                                        src="./assets/icons/arrow-down.svg"
+                                                        alt="Arrow down"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__wrap favourite__wrap">
+                                                    <img
+                                                        src="./assets/icons/minus.svg"
+                                                        alt="Minus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                    <span class="checkout__wrap-text">1</span>
+                                                    <img
+                                                        src="./assets/icons/plus.svg"
+                                                        alt="Plus"
+                                                        class="icon--opacity checkout__quantity-icon"
+                                                    />
+                                                </div>
+
+                                                <div class="checkout__horizontal checkout__cta favourite__cta">
+                                                    <button class="checkout__horizontal checkout__btn">
+                                                        <img
+                                                            src="./assets/icons/heart-red.svg"
+                                                            alt="Like"
+                                                            class="favourite__liked"
+                                                        />
+                                                        Save
+                                                    </button>
+
+                                                    <button
+                                                        class="checkout__horizontal checkout__btn js-toggle"
+                                                        toggle-target="#modal-delete"
+                                                    >
+                                                        <img src="./assets/icons/delete.svg" alt="Delete" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right -->
+                                    <div class="checkout__vertical checkout__right favourite__right">
+                                        <strong
+                                            class="checkout__price--bold checkout__right-price favourite__right-price"
+                                        >
+                                            $38.00
+                                        </strong>
+                                        <button
+                                            href="./checkout.html"
+                                            class="btn btn--primary btn--rounded favourite__btn"
+                                        >
+                                            Check Out
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="provisional favourite__provisional">
+                                <div class="checkout__horizontal provisional__bottom">
+                                    <a
+                                        href="./index-logined.html"
+                                        class="icon--opacity checkout__horizontal provisional__back"
+                                    >
+                                        <img src="./assets/icons/arrow-left.svg" alt="Arrow left" />
+                                        <span class="checkout__title">Continue Shopping</span>
+                                    </a>
+                                    <a
+                                        href="#!"
+                                        class="btn btn--primary btn--rounded favourite__btn favourite__btn--all"
+                                        >All Check Out</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- =============== Footer ================= -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load('#footer', './templates/footer.html');
+        </script>
+
+        <!-- =============== Modal ================= -->
+        <div id="modal-delete" class="modal modal--small hide">
+            <div class="modal__content">
+                <div class="modal__title">Are you sure you want to remove the product from your shopping cart?</div>
+                <div class="modal__cta">
+                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#modal-delete">Cancel</button>
+                    <button class="btn btn--primary modal__btn js-toggle" toggle-target="#modal-delete">Confirm</button>
+                </div>
+            </div>
+
+            <div class="modal__overlay js-toggle" toggle-target="#modal-delete"></div>
+        </div>
+
+        <!-- =============== Scripts ================= -->
+        <script src="./assets/scripts/validator.js"></script>
+        <script src="./assets/scripts/main.js"></script>
+    </body>
+</html>
