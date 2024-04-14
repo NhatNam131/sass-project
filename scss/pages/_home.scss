@@ -3,6 +3,10 @@
 .home {
     padding-bottom: 3.9rem;
 
+    @include abstracts.screen(sm) {
+        padding-bottom: 2rem;
+    }
+
     &__container {
         margin-top: 4rem;
 

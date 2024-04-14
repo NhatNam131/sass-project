@@ -1,0 +1,184 @@
+@use '../abstracts';
+
+%flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet {
+    padding: 3rem;
+    border-radius: 2rem;
+
+    color: var(--profile-color);
+    background-color: var(--profile-background);
+
+    @include abstracts.screen(sm) {
+        padding: 1.6rem;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.8rem;
+            line-height: 144.44%;
+        }
+
+        &--margin {
+            margin-top: 3rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 0.4rem;
+
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__card {
+        margin-top: 1.6rem;
+
+        &-item {
+            position: relative;
+
+            min-height: 17.1rem;
+            padding: 2rem;
+            border-radius: 1rem;
+
+            color: var(--profile-card-item-color);
+
+            @include abstracts.screen(xxl) {
+                min-height: 18rem;
+            }
+
+            @include abstracts.screen(md) {
+                min-height: 22.4rem;
+                padding: 3rem;
+            }
+
+            &::after {
+                content: url('../../assets/icons/profile/decor-1.svg');
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        & .col-4 {
+            &:nth-of-type(odd) .wallet__card-item {
+                background-color: #1e2e69;
+            }
+
+            &:nth-of-type(even) .wallet__card-item {
+                background-color: #354151;
+
+                &::after {
+                    content: url('../../assets/icons/profile/decor-2.svg');
+                }
+            }
+
+            &:last-of-type .wallet__card-item {
+                &--add {
+                    @extend %flex-column-center;
+                    justify-content: center;
+                    gap: 1.4rem;
+
+                    border: 0.1rem dashed var(--profile-card-add-title-color);
+
+                    background-color: transparent !important;
+
+                    &::after {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        &-header,
+        &-number,
+        &-bottom {
+            position: relative;
+            z-index: 1;
+        }
+
+        &-header {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        &-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &-number {
+            margin-top: 3.7rem;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            gap: 4rem;
+
+            margin-top: 2rem;
+
+            @include abstracts.screen(md) {
+                margin-top: 3rem;
+            }
+
+            &-title {
+                font-size: 0.8rem;
+                font-weight: 500;
+                line-height: 175%;
+
+                @include abstracts.screen(md) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &-content {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 140%;
+
+                @include abstracts.screen(md) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &-icon {
+                margin-left: auto;
+            }
+        }
+
+        &-add {
+            &--title {
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 142.857%;
+
+                color: var(--checkout-text-color);
+            }
+        }
+    }
+}
