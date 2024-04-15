@@ -1,6 +1,15 @@
 @use '../abstracts';
 
 .form {
+    &-horizontal {
+        display: flex;
+    }
+
+    &-vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__heading,
     &__label {
         display: block;

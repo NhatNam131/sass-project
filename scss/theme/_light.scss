@@ -155,6 +155,7 @@
     --payment-check-color: brightness(0) saturate(100%) invert(59%) sepia(29%) saturate(800%) hue-rotate(56deg)
         brightness(97%) contrast(93%);
     --payment-placeholder-color: #d2d1d6;
+
     //============== Modal =================
     --modal-background: #fff;
     --box-shadow-modal-color: rgba(200, 200, 200, 0.4);
@@ -168,4 +169,5 @@
     --profile-card-add-title-color: #d2d1d6;
     --profile-account-info-item-background: #f6f6f6;
     --profile-account-info-item-thumb-background: #fff;
+    --profile-card-add-placeholder-input-color: #d2d1d6;
 }

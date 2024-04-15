@@ -73,6 +73,12 @@ textarea {
     background: transparent;
 }
 
+input {
+    @supports (-webkit-touch-callout: none) {
+        font-size: 1.6rem;
+    }
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active,

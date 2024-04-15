@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Minh Pham | Grocerymart</title>
+        <title>Add Card | Grocerymart</title>
 
         <!-- =============== Favicon ================= -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -42,9 +42,9 @@
                 </div>
 
                 <!-- =============== Profile ================= -->
-                <section class="home__container profile__margin--top">
+                <section class="home__container profile__margin--top" style="margin-top: 3rem">
                     <div class="row row-cols-md-1 gy-md-3">
-                        <div class="col-3 col-xl-4 col-lg-5">
+                        <div class="col-3 col-xl-4 col-lg-5 d-md-none">
                             <section class="user">
                                 <div class="user__header">
                                     <div class="user__avatar">
@@ -199,194 +199,90 @@
 
                         <div class="col-9 col-xl-8 col-lg-7 profile__margin--top">
                             <section class="wallet">
-                                <!-- Card -->
-                                <h2 class="wallet__heading">My Wallet</h2>
-                                <span class="wallet__desc">Payment methods</span>
-                                <div class="wallet__card">
-                                    <div class="row row-col-3 row-cols-xxl-2 row-cols-lg-1 gy-3 gy-sm-2">
-                                        <!-- Item 1 -->
-                                        <div class="col-4">
-                                            <article class="wallet__card-item">
-                                                <div class="wallet__card-header">
-                                                    <img
-                                                        src="./assets/icons/profile/card-icon-1.svg"
-                                                        alt=""
-                                                        class="wallet__card-icon"
-                                                    />
-                                                    <h3 class="wallet__card-title">FeatherCard</h3>
-                                                </div>
+                                <form action="" class="form-card">
+                                    <div class="form-horizontal form-card__header">
+                                        <a href="./profile.html">
+                                            <img
+                                                src="./assets/icons/profile/back.svg"
+                                                alt="Back"
+                                                class="icon--opacity"
+                                            />
+                                        </a>
+                                        <h2 class="form-card__heading">Add credit or debit card</h2>
+                                    </div>
 
-                                                <div class="wallet__card-number">1234 4567 8901 2221</div>
-
-                                                <div class="wallet__card-bottom">
-                                                    <div class="wallet__card-bottom-wrap">
-                                                        <div class="wallet__card-bottom-title">Card Holder</div>
-                                                        <div class="wallet__card-bottom-content">Minh Pham</div>
-                                                    </div>
-
-                                                    <div class="wallet__card-bottom-wrap">
-                                                        <div class="wallet__card-bottom-title">Expired</div>
-                                                        <div class="wallet__card-bottom-content">10/22</div>
-                                                    </div>
-
-                                                    <img
-                                                        src="./assets/icons/profile/card-icon-3.svg"
-                                                        alt=""
-                                                        class="wallet__card-bottom-icon"
-                                                    />
-                                                </div>
-                                            </article>
+                                    <div class="form-horizontal form-card__horizontal">
+                                        <div class="form-vertical form-card__vertical">
+                                            <label class="form-card__label">First Name</label>
+                                            <input type="text" class="form-card__input" value="Minh" />
                                         </div>
-
-                                        <!-- Item 2 -->
-                                        <div class="col-4">
-                                            <article class="wallet__card-item">
-                                                <div class="wallet__card-header">
-                                                    <img
-                                                        src="./assets/icons/profile/card-icon-2.svg"
-                                                        alt=""
-                                                        class="wallet__card-icon"
-                                                    />
-                                                    <h3 class="wallet__card-title">FeatherCard</h3>
-                                                </div>
-
-                                                <div class="wallet__card-number">1234 4567 8901 2221</div>
-
-                                                <div class="wallet__card-bottom">
-                                                    <div class="wallet__card-bottom-wrap">
-                                                        <div class="wallet__card-bottom-title">Card Holder</div>
-                                                        <div class="wallet__card-bottom-content">Minh Pham</div>
-                                                    </div>
-
-                                                    <div class="wallet__card-bottom-wrap">
-                                                        <div class="wallet__card-bottom-title">Expired</div>
-                                                        <div class="wallet__card-bottom-content">11/22</div>
-                                                    </div>
-
-                                                    <img
-                                                        src="./assets/icons/profile/card-icon-3.svg"
-                                                        alt=""
-                                                        class="wallet__card-bottom-icon"
-                                                    />
-                                                </div>
-                                            </article>
-                                        </div>
-
-                                        <!-- Add item -->
-                                        <div class="col-4">
-                                            <a
-                                                href="./profile-add-card.html"
-                                                class="wallet__card-item wallet__card-item--add"
-                                            >
-                                                <img src="./assets/icons/plus.svg" alt="Add" class="icon--opacity" />
-                                                <span class="wallet__card-add--title">Add New Card</span>
-                                            </a>
+                                        <div class="form-vertical form-card__vertical">
+                                            <label class="form-card__label">Last Name</label>
+                                            <input type="text" class="form-card__input" value="Pham" />
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Account -->
-                                <h2 class="wallet__heading wallet__heading--margin">Account info</h2>
-                                <span class="wallet__desc">Addresses, contact information and password</span>
-                                <div class="account-info__list">
-                                    <!-- Item 1 -->
-                                    <article class="account-info__item">
-                                        <div class="account-info__item--thumb">
-                                            <img
-                                                src="./assets/icons/profile/mail.svg"
-                                                alt="Mail"
-                                                class="icon--opacity account-info__item--image"
+                                    <div class="form-horizontal form-card__horizontal">
+                                        <div class="form-vertical form-card__vertical">
+                                            <label for="card-information" class="form-card__label"
+                                                >Card Information</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-card__input"
+                                                id="card-information"
+                                                placeholder="Card Number"
                                             />
                                         </div>
-                                        <div class="account-info__item--right">
-                                            <h3 class="account-info__item--title">Email Address</h3>
-                                            <p class="account-info__item--desc">tarek97.ta@gmail.com</p>
-                                        </div>
-                                    </article>
-
-                                    <!-- Item 2 -->
-                                    <article class="account-info__item">
-                                        <div class="account-info__item--thumb">
-                                            <img
-                                                src="./assets/icons/profile/telephone.svg"
-                                                alt="Telephone"
-                                                class="icon--opacity account-info__item--image"
+                                        <div class="form-vertical form-card__vertical">
+                                            <label for="expiration-date" class="form-card__label"
+                                                >Expiration Date</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-card__input"
+                                                id="expiration-date"
+                                                placeholder="MM/YY"
                                             />
                                         </div>
-                                        <div class="account-info__item--right">
-                                            <h3 class="account-info__item--title">Phone number</h3>
-                                            <p class="account-info__item--desc">+000 11122 2345 657</p>
-                                        </div>
-                                    </article>
+                                    </div>
 
-                                    <!-- Item 2 -->
-                                    <article class="account-info__item">
-                                        <div class="account-info__item--thumb">
-                                            <img
-                                                src="./assets/icons/profile/location-icon.svg"
-                                                alt="Address"
-                                                class="icon--opacity account-info__item--image"
+                                    <div class="form-horizontal form-card__horizontal">
+                                        <div class="form-vertical form-card__vertical">
+                                            <label for="cvv" class="form-card__label">CVV</label>
+                                            <input
+                                                type="text"
+                                                class="form-card__input"
+                                                id="cvv"
+                                                placeholder="CVV Number"
                                             />
                                         </div>
-                                        <div class="account-info__item--right">
-                                            <h3 class="account-info__item--title">Add an address</h3>
-                                            <p class="account-info__item--desc">
-                                                Bangladesh Embassy, Washington, DC 20008
-                                            </p>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- List products -->
-                                <h2 class="wallet__heading wallet__heading--margin">List</h2>
-                                <span class="wallet__desc">2 items - Primary</span>
-                                <div class="profile-product__list">
-                                    <!-- Item 1 -->
-                                    <article class="profile-product__item">
-                                        <div class="profile-product__item-thumb">
-                                            <img
-                                                src="./assets/images/products/item-1.png"
-                                                alt="Product"
-                                                class="profile-product__item-image"
+                                        <div class="form-vertical form-card__vertical">
+                                            <label for="phone-number" class="form-card__label">Phone Number</label>
+                                            <input
+                                                type="text"
+                                                class="form-card__input"
+                                                id="phone-number"
+                                                placeholder="Your Phone Number"
                                             />
                                         </div>
+                                    </div>
 
-                                        <div class="profile-product__item-info">
-                                            <h3 class="profile-product__item-info--title">
-                                                Coffee Beans - Espresso Arabica and Robusta Beans
-                                            </h3>
-                                            <div class="profile-product__item-info--bottom">
-                                                <span class="profile-product__item-info--price">$47.00</span>
-                                                <button class="profile-product__btn btn btn--primary btn--rounded">
-                                                    Add to cart
-                                                </button>
-                                            </div>
+                                    <div class="form-vertical form-card__vertical form-card__vertical--checkbox">
+                                        <label for="" class="form-card__label">Card Preferences</label>
+                                        <div class="form-horizontal form-card__horizontal">
+                                            <label class="form-card__label--checkbox">
+                                                <input type="checkbox" class="form-card__input--checkbox" hidden />
+                                                Set as default card
+                                            </label>
                                         </div>
-                                    </article>
+                                    </div>
 
-                                    <!-- Item 2 -->
-                                    <article class="profile-product__item">
-                                        <div class="profile-product__item-thumb">
-                                            <img
-                                                src="./assets/images/products/item-2.png"
-                                                alt="Product"
-                                                class="profile-product__item-image"
-                                            />
-                                        </div>
-
-                                        <div class="profile-product__item-info">
-                                            <h3 class="profile-product__item-info--title">
-                                                Lavazza Coffee Blends - Try the Italian Espresso
-                                            </h3>
-                                            <div class="profile-product__item-info--bottom">
-                                                <span class="profile-product__item-info--price">$53.00</span>
-                                                <button class="profile-product__btn btn btn--primary btn--rounded">
-                                                    Add to cart
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
+                                    <div class="form-horizontal form-card__horizontal form-card__cta">
+                                        <button class="btn btn--text form-card__btn">Cancel</button>
+                                        <button class="btn btn--primary btn--rounded form-card__btn">Save Card</button>
+                                    </div>
+                                </form>
                             </section>
                         </div>
                     </div>

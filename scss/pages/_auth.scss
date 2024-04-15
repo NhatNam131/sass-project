@@ -427,6 +427,157 @@
             }
         }
     }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        @include abstracts.screen(lg) {
+            gap: 2rem;
+        }
+
+        @include abstracts.screen(sm) {
+            gap: 1.6rem;
+        }
+
+        &__horizontal {
+            gap: 3rem;
+
+            @include abstracts.screen(lg) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            @include abstracts.screen(sm) {
+                gap: 1.6rem;
+            }
+        }
+
+        &__vertical {
+            gap: 2rem;
+            flex: 1;
+
+            &--checkbox {
+                gap: 1rem;
+            }
+        }
+
+        &__header {
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &__heading {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+            }
+        }
+
+        &__label {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+            }
+
+            &--checkbox {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                padding-left: 2.85rem;
+
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 146.667%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 1.85rem;
+                    height: 1.85rem;
+                    border: 0.1rem solid var(--checkout-text-color);
+                    border-radius: 0.5rem;
+                }
+
+                &::after {
+                    content: url(../../assets/icons/check.svg);
+                    position: absolute;
+                    top: 0;
+                    left: 5px;
+                    width: 1rem;
+                    height: 1rem;
+                    filter: var(--shipping-check-color);
+
+                    @include abstracts.screen(sm) {
+                        top: 0.2rem;
+                        left: -47px;
+                    }
+                }
+            }
+        }
+
+        &__input {
+            padding: 1.2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--checkout-boder-color);
+
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+
+                @supports (-webkit-touch-callout: none) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &::placeholder {
+                color: var(--profile-card-add-placeholder-input-color);
+            }
+
+            &--checkbox {
+                &:checked .form-card__label--checkbox::before {
+                    border-color: #ffb700;
+                    background: #ffb700;
+                }
+
+                &:checked .form-card__label--checkbox::after {
+                    display: block;
+                }
+            }
+        }
+
+        &__cta {
+            flex-direction: row;
+            margin-left: auto;
+        }
+
+        &__btn {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
 
 .dot {
