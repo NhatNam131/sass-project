@@ -210,11 +210,12 @@
     }
 
     &__message--error {
+        display: none;
         font-size: 1.4rem;
         color: var(--form-error-message-color);
 
-        &:has(:not(:empty)) .form__wrap-input {
-            border-color: #ff0000;
+        &:not(:empty) {
+            display: block;
         }
     }
 
@@ -428,7 +429,7 @@
         }
     }
 
-    &-card {
+    &-profile {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -466,6 +467,8 @@
         &__header {
             align-items: center;
             gap: 1rem;
+
+            // margin-bottom: 1.5rem;
         }
 
         &__heading {
@@ -490,6 +493,7 @@
             }
 
             &--checkbox {
+                cursor: pointer;
                 position: relative;
                 display: flex;
                 align-items: center;
@@ -565,7 +569,8 @@
 
         &__cta {
             flex-direction: row;
-            margin-left: auto;
+            justify-content: flex-end;
+            gap: 2rem;
         }
 
         &__btn {

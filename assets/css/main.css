@@ -4059,11 +4059,12 @@ html *::-webkit-scrollbar-track {
   line-height: 140%;
 }
 .form__message--error {
+  display: none;
   font-size: 1.4rem;
   color: var(--form-error-message-color);
 }
-.form__message--error:has(:not(:empty)) .form__wrap-input {
-  border-color: #ff0000;
+.form__message--error:not(:empty) {
+  display: block;
 }
 .form__bottom {
   display: flex;
@@ -4256,69 +4257,70 @@ html *::-webkit-scrollbar-track {
     margin-top: -0.6rem;
   }
 }
-.form-card {
+.form-profile {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 @media (max-width: 991.98px) {
-  .form-card {
+  .form-profile {
     gap: 2rem;
   }
 }
 @media (max-width: 575.98px) {
-  .form-card {
+  .form-profile {
     gap: 1.6rem;
   }
 }
-.form-card__horizontal {
+.form-profile__horizontal {
   gap: 3rem;
 }
 @media (max-width: 991.98px) {
-  .form-card__horizontal {
+  .form-profile__horizontal {
     flex-direction: column;
     gap: 2rem;
   }
 }
 @media (max-width: 575.98px) {
-  .form-card__horizontal {
+  .form-profile__horizontal {
     gap: 1.6rem;
   }
 }
-.form-card__vertical {
+.form-profile__vertical {
   gap: 2rem;
   flex: 1;
 }
-.form-card__vertical--checkbox {
+.form-profile__vertical--checkbox {
   gap: 1rem;
 }
-.form-card__header {
+.form-profile__header {
   align-items: center;
   gap: 1rem;
 }
-.form-card__heading {
+.form-profile__heading {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
 }
 @media (max-width: 575.98px) {
-  .form-card__heading {
+  .form-profile__heading {
     font-size: 1.5rem;
     line-height: 146.667%;
   }
 }
-.form-card__label {
+.form-profile__label {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
 @media (max-width: 575.98px) {
-  .form-card__label {
+  .form-profile__label {
     font-size: 1.5rem;
     line-height: 146.667%;
   }
 }
-.form-card__label--checkbox {
+.form-profile__label--checkbox {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -4328,7 +4330,7 @@ html *::-webkit-scrollbar-track {
   font-weight: 500;
   line-height: 146.667%;
 }
-.form-card__label--checkbox::before {
+.form-profile__label--checkbox::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -4338,7 +4340,7 @@ html *::-webkit-scrollbar-track {
   border: 0.1rem solid var(--checkout-text-color);
   border-radius: 0.5rem;
 }
-.form-card__label--checkbox::after {
+.form-profile__label--checkbox::after {
   content: url(../../assets/icons/check.svg);
   position: absolute;
   top: 0;
@@ -4348,12 +4350,12 @@ html *::-webkit-scrollbar-track {
   filter: var(--shipping-check-color);
 }
 @media (max-width: 575.98px) {
-  .form-card__label--checkbox::after {
+  .form-profile__label--checkbox::after {
     top: 0.2rem;
     left: -47px;
   }
 }
-.form-card__input {
+.form-profile__input {
   padding: 1.2rem;
   border-radius: 1rem;
   border: 1px solid var(--checkout-boder-color);
@@ -4362,37 +4364,38 @@ html *::-webkit-scrollbar-track {
   line-height: 144.444%;
 }
 @media (max-width: 575.98px) {
-  .form-card__input {
+  .form-profile__input {
     font-size: 1.5rem;
     line-height: 146.667%;
   }
   @supports (-webkit-touch-callout: none) {
-    .form-card__input {
+    .form-profile__input {
       font-size: 1.6rem;
     }
   }
 }
-.form-card__input::placeholder {
+.form-profile__input::placeholder {
   color: var(--profile-card-add-placeholder-input-color);
 }
-.form-card__input--checkbox:checked .form-card__label--checkbox::before {
+.form-profile__input--checkbox:checked .form-card__label--checkbox::before {
   border-color: #ffb700;
   background: #ffb700;
 }
-.form-card__input--checkbox:checked .form-card__label--checkbox::after {
+.form-profile__input--checkbox:checked .form-card__label--checkbox::after {
   display: block;
 }
-.form-card__cta {
+.form-profile__cta {
   flex-direction: row;
-  margin-left: auto;
+  justify-content: flex-end;
+  gap: 2rem;
 }
-.form-card__btn {
+.form-profile__btn {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
 }
 @media (max-width: 575.98px) {
-  .form-card__btn {
+  .form-profile__btn {
     font-size: 1.4rem;
   }
 }

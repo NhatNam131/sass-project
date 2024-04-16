@@ -88,3 +88,43 @@ Validator({
     ],
     onSubmit: function () {},
 });
+
+// Profile add card
+Validator({
+    form: '#form-add-card',
+    formGroupSelector: '.form-profile__vertical',
+    errorSelector: '.form__message--error',
+    rules: [
+        Validator.isRequired('#first-name'),
+        Validator.minLength('#first-name', 2, 'Please enter your first name'),
+        Validator.isRequired('#last-name'),
+        Validator.minLength('#last-name', 2, 'Please enter your last name'),
+        Validator.isRequired('#card-information'),
+        Validator.isRequired('#expiration-date'),
+        Validator.isRequired('#cvv'),
+        Validator.isRequired('#phone'),
+        Validator.isPhone('#phone'),
+    ],
+    onSubmit: function () {
+        window.location.replace('profile.html');
+    },
+});
+
+// Personal info
+Validator({
+    form: '#form-personal-info',
+    formGroupSelector: '.form-profile__vertical',
+    errorSelector: '.form__message--error',
+    rules: [
+        Validator.isRequired('#full-name'),
+        Validator.minLength('#full-name', 2, 'Please enter your full name'),
+        Validator.isRequired('#email'),
+        Validator.isMail('#email'),
+        Validator.isRequired('#phone'),
+        Validator.isPhone('#phone'),
+        Validator.isRequired('#password'),
+    ],
+    onSubmit: function () {
+        window.location.replace('profile.html');
+    },
+});

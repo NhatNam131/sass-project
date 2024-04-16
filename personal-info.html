@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add Card | Grocerymart</title>
+        <title>Personal Info | Grocerymart</title>
 
         <!-- =============== Favicon ================= -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -67,7 +67,7 @@
                                         <h2 class="user__menu-title">Manage Account</h2>
                                         <ul class="user__menu-list">
                                             <li class="user__menu-item">
-                                                <a href="./personal-info.html" class="user__menu-link">
+                                                <a href="#!" class="user__menu-link">
                                                     <div class="user__menu-item--wrap-icon user__menu-item--margin">
                                                         <img
                                                             src="./assets/icons/profile/user-icon.svg"
@@ -199,7 +199,7 @@
 
                         <div class="col-9 col-xl-8 col-lg-7 profile__margin--top">
                             <section class="wallet">
-                                <form action="" class="form-profile" id="form-add-card">
+                                <form action="" class="form-profile" id="form-personal-info">
                                     <div class="form-horizontal form-profile__header">
                                         <a href="./profile.html">
                                             <img
@@ -208,54 +208,27 @@
                                                 class="icon--opacity"
                                             />
                                         </a>
-                                        <h2 class="form-profile__heading">Add credit or debit card</h2>
+                                        <h2 class="form-profile__heading">Personal info</h2>
                                     </div>
 
                                     <div class="form-horizontal form-profile__horizontal">
                                         <div class="form-vertical form-profile__vertical">
-                                            <label class="form-profile__label">First Name</label>
+                                            <label class="form-profile__label">Full name</label>
                                             <input
                                                 type="text"
                                                 class="form-profile__input"
-                                                value="Minh"
-                                                id="first-name"
+                                                value="Minh Pham"
+                                                id="full-name"
                                             />
                                             <span class="form__message--error"></span>
                                         </div>
                                         <div class="form-vertical form-profile__vertical">
-                                            <label class="form-profile__label">Last Name</label>
+                                            <label class="form-profile__label">Email address</label>
                                             <input
-                                                type="text"
+                                                type="email"
                                                 class="form-profile__input"
-                                                value="Pham"
-                                                id="last-name"
-                                            />
-                                            <span class="form__message--error"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-horizontal form-profile__horizontal">
-                                        <div class="form-vertical form-profile__vertical">
-                                            <label for="card-information" class="form-profile__label">
-                                                Card Information
-                                            </label>
-                                            <input
-                                                type="text"
-                                                class="form-profile__input"
-                                                id="card-information"
-                                                placeholder="Card Number"
-                                            />
-                                            <span class="form__message--error"></span>
-                                        </div>
-                                        <div class="form-vertical form-profile__vertical">
-                                            <label for="expiration-date" class="form-profile__label">
-                                                Expiration Date
-                                            </label>
-                                            <input
-                                                type="date"
-                                                class="form-profile__input"
-                                                id="expiration-date"
-                                                placeholder="MM/YY"
+                                                value="admin@uihut.com"
+                                                id="email"
                                             />
                                             <span class="form__message--error"></span>
                                         </div>
@@ -263,42 +236,32 @@
 
                                     <div class="form-horizontal form-profile__horizontal">
                                         <div class="form-vertical form-profile__vertical">
-                                            <label for="cvv" class="form-profile__label">CVV</label>
+                                            <label for="phone" class="form-profile__label"> Phone number </label>
                                             <input
-                                                type="text"
-                                                class="form-profile__input"
-                                                id="cvv"
-                                                placeholder="CVV Number"
-                                            />
-                                            <span class="form__message--error"></span>
-                                        </div>
-                                        <div class="form-vertical form-profile__vertical">
-                                            <label for="phone" class="form-profile__label">Phone Number</label>
-                                            <input
-                                                type="text"
+                                                type="tel"
                                                 class="form-profile__input"
                                                 id="phone"
-                                                placeholder="Your Phone Number"
+                                                placeholder="Card Number"
+                                                value="+84 0323874828"
                                             />
                                             <span class="form__message--error"></span>
                                         </div>
-                                    </div>
-
-                                    <div class="form-vertical form-profile__vertical form-profile__vertical--checkbox">
-                                        <label for="" class="form-profile__label">Card Preferences</label>
-                                        <div class="form-horizontal form-profile__horizontal">
-                                            <label class="form-profile__label--checkbox">
-                                                <input type="checkbox" class="form-profile__input--checkbox" hidden />
-                                                Set as default card
-                                            </label>
+                                        <div class="form-vertical form-profile__vertical">
+                                            <label for="password" class="form-profile__label">Password</label>
+                                            <input
+                                                type="password"
+                                                class="form-profile__input"
+                                                id="password"
+                                                placeholder="Your Password"
+                                                value="123456"
+                                            />
+                                            <span class="form__message--error"></span>
                                         </div>
                                     </div>
 
                                     <div class="form-horizontal form-profile__horizontal form-profile__cta">
                                         <a href="./profile.html" class="btn btn--text form-profile__btn">Cancel</a>
-                                        <button class="btn btn--primary btn--rounded form-profile__btn">
-                                            Save Card
-                                        </button>
+                                        <button class="btn btn--primary btn--rounded form-profile__btn">Save</button>
                                     </div>
                                 </form>
                             </section>
