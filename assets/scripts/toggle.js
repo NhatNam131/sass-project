@@ -139,13 +139,6 @@ function handleActiveMenu() {
     });
 }
 
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
 window.addEventListener('template-loaded', initJsToggle);
 
 function initJsToggle() {
@@ -220,9 +213,11 @@ window.addEventListener('template-loaded', () => {
             const isDark = localStorage.dark === 'true';
             document.querySelector('html').classList.toggle('dark', !isDark);
             localStorage.setItem('dark', !isDark);
+            switchBtn.setAttribute(isDark ? 'checked' : null, isDark ? 'false' : null);
             // switchBtn.querySelector('span').textContent = isDark ? 'Dark mode' : 'Light mode';
         };
         const isDark = localStorage.dark === 'true';
+        switchBtn.setAttribute(isDark ? 'checked' : null, isDark ? 'false' : null);
         // switchBtn.querySelector('span').textContent = isDark ? 'Light mode' : 'Dark mode';
     }
 });

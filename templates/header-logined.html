@@ -4753,7 +4753,7 @@
                             <li class="top-action__user--menu-item">
                                 <a href="#!" class="top-action__user--menu-link">Setting</a>
                             </li>
-                            <li class="top-action__user--menu-item">
+                            <li class="top-action__user--menu-item js-toggle" toggle-target="#modal-logout">
                                 <a href="#!" class="top-action__user--menu-link">Log out</a>
                             </li>
                         </ul>
@@ -4762,4 +4762,17 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal Logout -->
+<div id="modal-logout" class="modal modal--small hide">
+    <div class="modal__content">
+        <div class="modal__title">Are you sure to log out?</div>
+        <div class="modal__cta">
+            <button class="btn btn--text modal__btn js-toggle" toggle-target="#modal-logout">Cancel</button>
+            <a href="./index.html" class="btn btn--primary modal__btn">Confirm</a>
+        </div>
+    </div>
+
+    <div class="modal__overlay js-toggle" toggle-target="#modal-logout"></div>
 </div>

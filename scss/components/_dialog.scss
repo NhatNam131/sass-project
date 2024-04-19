@@ -52,7 +52,7 @@
         position: relative;
         z-index: 1;
         width: min(var(--content-width, 80rem), 100% - 4rem);
-        padding: 3rem 1rem 3rem 3rem;
+        padding: 2rem 3rem;
         border-radius: 2rem;
 
         color: var(--text-color);
@@ -82,9 +82,13 @@
         max-width: 40.5rem;
         text-align: center;
 
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
     }
 
     &__cta {
